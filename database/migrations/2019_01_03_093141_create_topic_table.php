@@ -20,6 +20,7 @@ class CreateTopicTable extends Migration
             $table->string('progress')->default('0/20');
             $table->string('picture');
             $table->integer('parent_id')->default(0);
+            $table->timestamp('created_at');
         });
     }
 
