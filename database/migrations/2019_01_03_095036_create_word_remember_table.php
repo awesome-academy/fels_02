@@ -19,7 +19,7 @@ class CreateWordRememberTable extends Migration
             $table->integer('word_id');
             $table->tinyInteger('status')->default(0);
             $table->tinyInteger('follow')->default(0);
-            $table->timestamp('date_learned')->nullable();
+            $table->timestamp('date_learned');
         });
     }
 

@@ -18,7 +18,7 @@ class CreateHistoryTable extends Migration
             $table->integer('user_id');
             $table->integer('lesson_id');
             $table->string('content');
-            $table->timestamp('date_update')->nullable();
+            $table->timestamp('date_update');
         });
     }
 
