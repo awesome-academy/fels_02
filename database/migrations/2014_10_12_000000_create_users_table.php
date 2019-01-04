@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('fullname');
             $table->string('email')->unique();
             $table->tinyInteger('gender');
-            $table->dateTime('date_of_birth');
+            $table->date('date_of_birth');
             $table->string('address');
             $table->string('phone');
             $table->string('avatar');
