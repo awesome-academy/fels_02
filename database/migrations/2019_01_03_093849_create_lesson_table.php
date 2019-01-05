@@ -17,6 +17,7 @@ class CreateLessonTable extends Migration
             $table->increments('lesson_id');
             $table->string('lesson_name');
             $table->integer('topic_id');
+            $table->timestamp('created_at');
         });
     }
 

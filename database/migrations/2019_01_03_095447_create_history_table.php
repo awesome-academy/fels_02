@@ -18,7 +18,8 @@ class CreateHistoryTable extends Migration
             $table->integer('user_id');
             $table->integer('lesson_id');
             $table->string('content');
-            $table->timestamp('date_update');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
     }
 

@@ -20,6 +20,7 @@ class CreateLessonDetailTable extends Migration
             $table->string('sound');
             $table->string('translate');
             $table->integer('lesson_id');
+            $table->timestamp('created_at');
         });
     }
 
