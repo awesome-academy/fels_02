@@ -1,6 +1,9 @@
     <div class="footer">
         <div class="container">
             <div class="col-md-3 grid_4">
+               <h3>Framgia E-learnining</h3>    
+            </div>
+            <div class="col-md-3 grid_4">
                <h3>@lang('messages.btn_about')</h3>    
                <p>"Project 1 Xuân Nam và Hùng Cường..."</p>
                   <ul class="social-nav icons_2 clearfix">
@@ -27,41 +30,6 @@
                     <br>
                     <abbr>Email : </abbr> <a href="#">xnam7799@gmail.com</a>
                </address>
-            </div>
-            <div class="col-md-3 grid_4">
-               <h3>@lang('messages.lb_working')</h3>
-                 <table class="table_working_hours">
-                    <tbody>
-                        <tr class="opened_1">
-                            <td class="day_label">monday</td>
-                            <td class="day_value">7:45 am - 4.45 pm</td>
-                        </tr>
-                        <tr class="opened">
-                            <td class="day_label">tuesday</td>
-                            <td class="day_value">7:45 am - 4.45 pm</td>
-                        </tr>
-                        <tr class="opened">
-                            <td class="day_label">wednesday</td>
-                            <td class="day_value">7:45 am - 4.45 pm</td>
-                        </tr>
-                        <tr class="opened">
-                            <td class="day_label">thursday</td>
-                            <td class="day_value">7:45 am - 4.45 pm</td>
-                        </tr>
-                        <tr class="opened">
-                            <td class="day_label">friday</td>
-                            <td class="day_value">7:45 am - 4.45 pm</td>
-                        </tr>
-                        <tr class="closed">
-                            <td class="day_label">saturday</td>
-                            <td class="day_value closed"><span>Closed</span></td>
-                        </tr>
-                        <tr class="closed">
-                            <td class="day_label">sunday</td>
-                            <td class="day_value closed"><span>Closed</span></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
             <div class="clearfix"> </div>
             <div class="copy">

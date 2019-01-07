@@ -12,8 +12,5 @@
 */
 
 Route::namespace('Home')->group(function(){
-    Route::get('/',[
-        'uses' => 'IndexController@index',
-        'as' => 'home.index.index'
-    ]);
+    Route::resource('home','Home');
 });
