@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Framgia E-learning</a>
+            <a class="navbar-brand" href="{{ route('home.index') }}">Framgia E-learning</a>
          </div>
          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -45,7 +45,7 @@
                   <ul class="dropdown-menu search-form">
                      {!! Form::open(['method'=>'POST']) !!}
                         {!! Form::text('search', '', ['class'=>'search-text', 'placeholder'=>trans('messages.lb_search')]) !!}
-                        {!! Form::button('<i class="fa fa-search"></i>', ['type'=>'submit', 'class'=>'search-submit']) !!}
+                        {!! Form::submit('Search', ['class'=>'search-submit']) !!}
                      {!! Form::close() !!}
                   </ul>
                </li>
@@ -67,7 +67,7 @@
          </div>
          <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-               <li><a href="#">@lang('messages.btn_home')</a></li>
+               <li><a href="{{ route('home.index') }}">@lang('messages.btn_home')</a></li>
                <li><a href="#">@lang('messages.btn_about')</a></li>
                <li class="dropdown mega-dropdown active">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('messages.btn_topic')<span class="caret"></span></a>        
@@ -79,7 +79,7 @@
                               <ul class="nav-list list-inline">
                                  @foreach($displayLessons as $key => $lesson)
                                     @if($lesson->topic_id == $topic->topic_id)
-                                       <li><a href="#"><img src="images/lessons/{{ $lesson->picture }}" class="img-responsive" alt="" style="width: 100px;height: 100px" /></a></li>
+                                       <li><a href="#"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
                                     @endif
                                  @endforeach
                               </ul>

@@ -14,8 +14,10 @@ class Home extends Controller
 	{
 		$displayTopics = Topic::get();
         $displayLessons = Lesson::get();
+
         $displayWordToday = LessonDetail::inRandomOrder()->limit(config('setting.number_limit'))->get();
 		$displayTopicToday = Topic::inRandomOrder()->limit(config('setting.number_limit'))->get();
+
     	return view('home.index.index', compact('displayTopics', 'displayLessons', 'displayWordToday', 'displayTopicToday', 'displayWord'));
 	}
 }
