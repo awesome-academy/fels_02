@@ -1,0 +1,36 @@
+#bs-example-navbar-collapse-1 {
+	height: 1px;
+}
+.table-bordered {
+	border: none;
+}
+.dropdown-toggle {
+	width: 100%;
+	font-size: 20px;
+}
+.wordToday {
+	font-size: 15px;
+	float: left;
+	padding-left: 5px;
+	word-wrap: break-word;
+	width: 200px;
+}
+.img-word {
+	float: right;
+	padding-right: 5px;
+	margin-left: 5px;
+}
+.img-word img {
+	width: 100px;
+	height: 100px;
+}
+.btn-readmore {
+	width: 70px;
+	height: 26px;
+	background-color: #FBB44D;
+	color: white;
+}
+.Topic_top h1 {
+	text-align: center;
+	font-size: 85px;
+}
