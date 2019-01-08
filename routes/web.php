@@ -23,6 +23,7 @@ Route::namespace('Authentication')->middleware('localization')->group(function()
 });
 Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('home', 'Home');
+    Route::resource('profile', 'MyProfile');
     Route::resource('wordfollow', 'MyWordRemember');
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
