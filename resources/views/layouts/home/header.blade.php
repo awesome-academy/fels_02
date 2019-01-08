@@ -20,6 +20,8 @@
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
         {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
         {{ Html::script('messages.js') }}
+        {{ Html::style(asset('https://use.fontawesome.com/releases/v5.6.3/css/all.css')) }}
+        {{ Html::script(asset('js/ajaxeditprofile.js')) }}
         {{ Html::style(asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')) }}
     </head>
     <body>
@@ -46,7 +48,7 @@
                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span> {{ Auth::user()->username }}</span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="javascript:void(0)" id="logout" onclick="return false">@lang('messages.btn_logout')</a>
+                                    <a class="dropdown-item" href="{{Route('profile.index')}}" id="history">@lang('messages.profile')</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{{Route('wordfollow.show', Auth::user()->user_id)}}" id="remember">@lang('messages.word_saved')</a>
@@ -56,6 +58,9 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{{Route('history.index')}}" id="history">@lang('messages.history')</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)" id="logout" onclick="return false">@lang('messages.btn_logout')</a>
                                 </li>
                             </ul>
                         </li>

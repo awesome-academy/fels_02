@@ -22,6 +22,7 @@ return [
     'status_userActive1' => 1,
     'status_userActive0' => 0,
     'file_save_lesson' => 'images/lessons/',
+    'file_save_avatar' => 'images/users/',
     'number_lessonmanagerpaginater' => 10,
     'folder_topic_img' => 'images/topics',
     'passPercent' => 70,
@@ -31,4 +32,8 @@ return [
     'wordsPaginate' => 50,
     'savedDefault' => 0,
     'check_exist_test' => 0,
+    'male_set' => 1,
+    'female_set' => 0,
+    'patter_address' => '^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]{6,}$',
+    'patter_phone' => '[0-9]+',
 ];
