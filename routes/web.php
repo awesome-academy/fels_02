@@ -13,6 +13,7 @@
 Route::namespace('Authentication')->group(function() {
     Route::resource('login', 'Login');
     Route::resource('logout', 'Logout');
+    Route::resource('register', 'Register');
 });
 Route::namespace('Home')->group(function(){
     Route::resource('home', 'Home');
