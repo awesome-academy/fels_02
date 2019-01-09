@@ -55,14 +55,15 @@
                                           <div class="wordToday">
                                              <h2>{{ $word->word_name }}</h2>
                                              <span>{{ $word->spelling }}</span>
+                                             <img src="/layouts/home/images/speaker.png" alt="spelling" class="img-speaker" onclick="document.getElementById('myTune{{ $word->word_id }}').play()">
                                              <p>{{ $word->translate }}</p>
                                           </div>
                                           <div class="img-word">
-                                             <audio controls>
-                                                <source src="audio/{{ $word->sound }}" type="audio/mpeg">
-                                             </audio>
                                              <img src="images/words/{{ $word->picture }}" alt="">
                                           </div>
+                                          <audio id="myTune{{ $word->word_id }}">
+                                             <source src="audio/{{ $word->sound }}">
+                                          </audio>
                                        </tbody>
                                     </table>
                                  </li>

@@ -33,4 +33,11 @@ return [
     'lesson_decription' => 'All Topic',
     'lang.en' => 'English',
     'lang.vi' => 'Vietnamese',
+    'lb_testLesson' => 'Test Lesson',
+    'input_word' => 'Input word',
+    'btn_finish' => 'Finish',
+    'btn_tryAgain' => 'Try again',
+    'lb_fillBlanks' => 'Fill in the blanks',
+    'testSuccess' => 'Congratulations on passing the test!',
+    'testFail' => 'You have not enough points, try a little more!',
 ];

@@ -33,4 +33,11 @@ return [
     'lesson_decription' => 'Tất cả các chủ đề',
     'lang.en' => 'Tiếng Anh',
     'lang.vi' => 'Tiếng Việt',
+    'lb_testLesson' => 'Kiểm tra bài học',
+    'input_word' => 'Nhập từ vựng',
+    'btn_finish' => 'Kết thúc',
+    'btn_tryAgain' => 'Thử lại',
+    'lb_fillBlanks' => 'Điền vào chỗ trống',
+    'testSuccess' => 'Chúc mừng bạn đã vượt qua bài kiểm tra!',
+    'testFail' => 'Bạn chưa đủ điểm, gắng thêm chút nữa nhé!',
 ];

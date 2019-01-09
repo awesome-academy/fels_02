@@ -17,8 +17,8 @@
     </div>
     <div class="admission admission-wordlist">
         <div class="container" >
-            <div class="test-list-space">
-                <div class="test-list-title">
+            <div class="test-list-space2">
+                <div class="test-list-title2">
                     <div>
                         <h3><a href="">{{ $nametopic->topic_name }}</a> > <a href="">{{ $namelesson->lesson_name }}</a></h3>
                         <p>@lang('messages.label_lsdetail_note')</p>
@@ -33,7 +33,7 @@
                         <li class="dropdown clist">
                             <audio id="audiotag{{$ls->word_id}}" src="/audio/{{$ls->sound}}" preload="auto"></audio>
                             <a href="javascript:play_single_sound({{ $ls->word_id }});">
-                                <span class="fas fa-volume-up"></span>
+                                <span class="fa fa-volume-up"></span>
                             </a>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$ls->word_name}}</a>
                             <ul class="dropdown-menu">
@@ -45,7 +45,7 @@
                         </li>
                     </div>
                     @endforeach
-                    <a href="" class="btn btn-success testbtn" >@lang('messages.btn_test')</a>
+                    <a href="{{ route('test-lesson.show', $namelesson->lesson_id) }}" class="btn btn-success testbtn" >@lang('messages.btn_test')</a>
                 </div>
             </div>
         </div>

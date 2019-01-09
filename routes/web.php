@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::pattern('id','[0-9]*');
+Route::pattern('slug','(.*)');
+
 Route::namespace('Lang')->group(function (){
     Route::post('/lang', [
         'as' => 'switch.lang',
@@ -27,6 +30,11 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
+    Route::resource('test-lesson','TestLesson');
+    Route::post('/test/{id}',[
+        'uses' => 'TestLesson@testLesson',
+        'as' => 'test',
+    ]);
 });
 Route::namespace('Admin')->group(function(){
     Route::resource('admin', 'HomeAdmin');

@@ -3,6 +3,7 @@
     @lang('messages.lesson_title')
 @endsection
 @section('content')
+@include('common.errors')
 <div class="courses_banner">
     <div class="container">
         <h3>{{ $topic->topic_name }}</h3>
@@ -29,7 +30,7 @@
                     <div class="portfolio-description">
                         <h4><a href="#">{{ $lesson->lesson_name }}</a></h4>
                         <p>{{ $lesson->preview }}</p>
-                        <a href="events.php">
+                        <a href="{{ route('lessondetail.show', $lesson->lesson_id) }}">
                             <span><i class="fa fa-chain chain_1"></i>@lang('messages.btn_viewLesson')</span>
                         </a>
                     </div>

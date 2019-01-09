@@ -12,11 +12,13 @@
         {{ Html::style(asset('layouts/home/css/jquery.countdown.css')) }}
         {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
         {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
+        {{ Html::style(asset('layouts/home/css/mystyle2.css')) }}
         {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
         {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
         {{ Html::script(asset('js/logoutajax.js')) }}
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
+        {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
     </head>
     <body>
         <nav class="navbar navbar-default" role="navigation">
