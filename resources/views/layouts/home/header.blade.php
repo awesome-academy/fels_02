@@ -92,7 +92,7 @@
                         {{ {!! Form::select('locale', ['en' => 'English', 'vi' => 'Vietnamese'], Lang::locale() === 'vi' ? 'vi' : 'en', []) !!} --}}
                         
                     {{-- {!! Form::close() !!} --}}
-                      <form action="language" method="post">
+                      <form action="language" method="po">
                         <select name="locale">
                           <option value="vi">viet</option>
                           <option value="en">eng</option>
