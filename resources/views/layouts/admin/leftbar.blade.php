@@ -17,7 +17,7 @@
                         <i class="fas fa-suitcase"></i>@lang('adminMess.lb_manage')</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="">
+                            <a href="{{ route('user.index') }}">
                                 <i class="fas fa-user"></i>@lang('adminMess.lb_user')
                             </a>
                         </li>

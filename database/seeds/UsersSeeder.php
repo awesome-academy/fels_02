@@ -21,7 +21,8 @@ class UsersSeeder extends Seeder
         	'address' => '08 Hà Văn Tính, Đà Nẵng',
         	'phone' => '0906498644',
         	'avatar' => 'avatar.jpg',
-        	'role_id' => '1',
+            'role_id' => '1',
+        	'status' => '1',
         	'remember_token' => '',
         ]);
     }
