@@ -12,7 +12,8 @@ class LessonSeeder extends Seeder
     public function run()
     {
         DB::table('lesson')->insert([
-        	'lesson_name' => 'Bài 1',
+            'lesson_name' => 'Bài 1',
+        	'picture' => 'animal.jpg',
         	'topic_id' => '1',
         ]);
     }

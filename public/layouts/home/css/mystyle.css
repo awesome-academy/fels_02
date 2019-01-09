@@ -13,12 +13,19 @@
 	float: left;
 	padding-left: 5px;
 	word-wrap: break-word;
-	width: 200px;
+	width: 150px;
+}
+.wordToday h2 {
+	display: inline;
+}
+.wordToday span {
+	font-size: 20px;
 }
 .img-word {
 	float: right;
 	padding-right: 5px;
 	margin-left: 5px;
+	width: 110px;
 }
 .img-word img {
 	width: 100px;
@@ -33,4 +40,20 @@
 .Topic_top h1 {
 	text-align: center;
 	font-size: 85px;
+}
+.img-word audio {
+	width: 88px;
+}
+#myTab li a {
+	color: white;
+}
+.event_left-item img {
+	width: 155px;
+	height: 125px;
+}
+.words {
+	width: 270px;
+}
+.btn_readmore_topic {
+	margin: 15px;
 }
