@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Framgia E-learning System" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
         {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
@@ -12,11 +13,13 @@
         {{ Html::style(asset('layouts/home/css/jquery.countdown.css')) }}
         {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
         {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
+        {{ Html::style(asset('layouts/home/css/mystyle2.css')) }}
         {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
         {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
         {{ Html::script(asset('js/logoutajax.js')) }}
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
+        {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
     </head>
     <body>
         <nav class="navbar navbar-default" role="navigation">
@@ -98,7 +101,7 @@
                                             <ul class="nav-list list-inline">
                                                 @foreach($displayLessons as $key => $lesson)
                                                 @if($lesson->topic_id == $topic->topic_id)
-                                                <li><a href="#"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
+                                                <li><a href="{{ route('lessondetail.show', $lesson->lesson_id) }}"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
                                                 @endif
                                                 @endforeach
                                             </ul>
