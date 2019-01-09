@@ -20,3 +20,6 @@ Route::namespace('Home')->group(function(){
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
 });
+Route::namespace('Admin')->group(function(){
+    Route::resource('admin', 'HomeAdmin');
+});
