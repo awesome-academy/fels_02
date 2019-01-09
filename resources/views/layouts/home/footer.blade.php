@@ -2,7 +2,7 @@
         <div class="container">
             <div class="col-md-3 grid_4">
                <h3>Framgia E-learnining</h3>
-               <img src="layouts/home/images/logo.jpg" alt="">
+               <img src="/layouts/home/images/logo.jpg">
             </div>
             <div class="col-md-3 grid_4">
                <h3>@lang('messages.btn_about')</h3>    
@@ -41,5 +41,6 @@
 {{ Html::script(asset('layouts/home/js/jquery.countdown.js')) }}
 {{ Html::script(asset('layouts/home/js/script.js')) }}
 {{ Html::script(asset('layouts/home/js/homeScript.js')) }}
+{{ Html::script('messages.js') }}
 </body>
 </html>

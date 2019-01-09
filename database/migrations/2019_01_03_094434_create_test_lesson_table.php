@@ -18,9 +18,10 @@ class CreateTestLessonTable extends Migration
             $table->string('exam_name');
             $table->integer('user_id');
             $table->integer('lesson_id');
-            $table->integer('sum_correct_answer');
-            $table->tinyInteger('status');
-            $table->timestamp('created_at');
+            $table->integer('sum_correct_answer')->default(0);
+            $table->tinyInteger('status')->default(0);
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
     }
 

@@ -28,7 +28,7 @@
                         <figcaption>
                             <h3 class="person-title"><a href="{{ route('lesson.show', $topic->topic_id) }}">{{ $topic->topic_name }}</a></h3>
                             <span class="person-deg">{{ $topic->preview }}</span>
-                            <p><a href="">0/20</a></p>
+                            <p><a href="#">{{ $topic->progress }}</a></p>
                             <div class="person-social">
                                 <ul class="social-person">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -41,9 +41,6 @@
             @endforeach
             <div class="clearfix"> </div>
         </div>
-        <ul class="pagination">
-            {{ $topicPaginate->links() }}
-        </ul>
     </div>
 </div>
 @endsection

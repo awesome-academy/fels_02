@@ -21,21 +21,39 @@
             {!! Form::open(['method' => 'post', 'route' => 'register.store', 'class' => 'login']) !!}
             <p class="lead">@lang('auth.title')</p>
             @include('common.errors')
-            <div class="form-group">
-                {!! Form::text('username', '', ['class' =>'required form-control', 'placeholder' => trans('auth.username')]) !!}
-            </div>
+            @if(!empty($username))
+                <div class="form-group">
+                    {!! Form::text('username', $username, ['class' =>'required form-control', 'placeholder' => trans('auth.username')]) !!}
+                </div>
+            @else
+                <div class="form-group">
+                    {!! Form::text('username', old('username'), ['class' =>'required form-control', 'placeholder' => trans('auth.username')]) !!}
+                </div>
+            @endif
             <div class="form-group">
                 {!! Form::password('password', ['class' =>'password required form-control', 'placeholder' => trans('auth.password')]) !!}
             </div>
             <div class="form-group">
                 {!! Form::password('password_confirmation', ['class' => 'password required form-control', 'id' => 'password-confirm', 'placeholder' => trans('auth.repassword')]) !!}
             </div>
-            <div class="form-group">
-                {!! Form::text('fullname', '', ['class' =>'required form-control', 'placeholder' => trans('auth.fullname')]) !!}
-            </div>
-            <div class="form-group">
-                {!! Form::email('email', '', ['class' =>'required form-control', 'placeholder' => trans('auth.email')]) !!}
-            </div>
+            @if(!empty($fullname))
+                <div class="form-group">
+                    {!! Form::text('fullname', $fullname, ['class' =>'required form-control', 'placeholder' => trans('auth.fullname')]) !!}
+                </div>
+            @else
+                <div class="form-group">
+                    {!! Form::text('fullname', old('fullname'), ['class' =>'required form-control', 'placeholder' => trans('auth.fullname')]) !!}
+                </div>
+            @endif
+            @if(!empty($email))
+                <div class="form-group">
+                    {!! Form::email('email', $email, ['class' =>'required form-control', 'placeholder' => trans('auth.email')]) !!}
+                </div>
+            @else
+                <div class="form-group">
+                    {!! Form::email('email', old('email'), ['class' =>'required form-control', 'placeholder' => trans('auth.email')]) !!}
+                </div>
+            @endif
             <div class="form-group">
                 {!! Form::submit(trans('auth.register'), ['class' => 'btn btn-primary btn-lg1 btn-block']) !!}
             </div>

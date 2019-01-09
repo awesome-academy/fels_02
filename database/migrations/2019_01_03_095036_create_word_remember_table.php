@@ -19,8 +19,8 @@ class CreateWordRememberTable extends Migration
             $table->integer('word_id');
             $table->tinyInteger('status')->default(0);
             $table->tinyInteger('follow')->default(0);
-            $table->timestamp('updated_at');
-            $table->timestamp('created_at');
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
     }
 

@@ -8,7 +8,7 @@ class LessonDetail extends Model
 {
     protected $table = 'lesson_detail';
     protected $primaryKey = 'word_id';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'word_name',

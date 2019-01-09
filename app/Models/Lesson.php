@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Lesson extends Model
 {
+    use Notifiable;
     protected $table = 'lesson';
     protected $primaryKey = 'lesson_id';
     public $timestamps = false;

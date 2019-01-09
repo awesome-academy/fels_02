@@ -33,7 +33,7 @@
                             <li class="dropdown clist">
                                 <audio id="audiotag{{$wr->word_id}}" src="/audio/{{$wr->sound}}" preload="auto"></audio>
                                 <a href="javascript:play_single_sound({{ $wr->word_id }});">
-                                    <span class="fas fa-volume-up"></span>
+                                    <span class="fa fa-volume-up"></span>
                                 </a>
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$wr->word_name}}</a>
                                 <ul class="dropdown-menu">
@@ -45,7 +45,6 @@
                             </li>
                         </div>
                     @endforeach
-                    <a href="" class="btn btn-success testbtn" >@lang('messages.btn_test')</a>
                 </div>
             </div>
         </div>

@@ -16,11 +16,11 @@ class CreateLessonDetailTable extends Migration
         Schema::create('lesson_detail', function (Blueprint $table) {
             $table->increments('word_id');
             $table->string('word_name');
-            $table->string('picture');
+            $table->string('picture')->default('default.jpeg');;
             $table->string('sound');
+            $table->string('word_type');
             $table->string('translate');
             $table->integer('lesson_id');
-            $table->timestamp('created_at');
         });
     }
 

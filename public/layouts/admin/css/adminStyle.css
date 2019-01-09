@@ -12,7 +12,7 @@
     padding-top: 180px;
 }
 .mb30-userAdmin {
-    width: 136% !important;
+    width: 58em !important;
 }
 .data-tool-add {
     padding-left: 40px;
@@ -33,4 +33,31 @@
 }
 .card {
     width: 180%;
+}
+.long {
+    width: 26em;
+}
+.unread {
+    background-color: #e5e5e5;
+}
+.footer-notification {
+    height: 30px;
+}
+.footer-notification a {
+    padding:4px 0 !important;
+}
+.title-modal {
+    color: green;
+    padding-left: 20%;
+}
+.title-modal-body{
+    font-weight: 500;
+    color: #b37070;
+    padding-left: 5%;
+}
+.username {
+    color: darkblue;
+}
+.status {
+    color: greenyellow;
 }

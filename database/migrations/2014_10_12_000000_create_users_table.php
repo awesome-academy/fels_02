@@ -23,9 +23,9 @@ class CreateUsersTable extends Migration
             $table->date('date_of_birth')->nullable();
             $table->string('address')->nullable();
             $table->string('phone')->nullable();
-            $table->string('avatar')->nullable();
-            $table->integer('role_id');
-            $table->tinyInteger('status');
+            $table->string('avatar')->default('default.jpeg');
+            $table->integer('role_id')->default(1);
+            $table->tinyInteger('status')->default(0);;
             $table->rememberToken();
         });
     }

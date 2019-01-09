@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia//Saigon',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,7 +176,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Mariuzzo\LaravelJsLocalization\LaravelJsLocalizationServiceProvider::class,
     ],
 
     /*
@@ -227,7 +228,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Carbon' => 'Carbon\Carbon',
     ],
 
 ];

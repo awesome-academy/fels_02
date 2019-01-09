@@ -86,7 +86,6 @@
                                                 </label>
                                             @endif
                                         </td>       
-                                        
                                         <td>
                                             @if($user->role_id != config('setting.number_whereRoleID'))
                                                 <span class="more">

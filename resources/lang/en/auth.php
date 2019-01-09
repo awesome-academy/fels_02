@@ -7,6 +7,7 @@ return [
     'login' => 'login',
     'loginfb' => 'Log In with Facebook',
     'logingg' => 'Log In with Google',
+    'logintw' => 'Log In with Twitter',
     'username' => 'Username',
     'password' => 'Password',
     'linkregister' => 'Do not have an account?' ,

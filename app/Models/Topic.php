@@ -9,7 +9,7 @@ class Topic extends Model
 {
     protected $table = 'topic';
     protected $primaryKey = 'topic_id';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'topic_name',
