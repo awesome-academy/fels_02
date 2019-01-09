@@ -18,4 +18,5 @@ return [
     'lb_contactUs' => 'Contact',
     'lb_working' => 'Working Hour',
     'btn_viewLesson' => 'VIEW LESSON',
+    'lb_home' => 'Home',
 ];

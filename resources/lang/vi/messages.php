@@ -18,4 +18,5 @@ return [
     'lb_contactUs' => 'Liên hệ',
     'lb_working' => 'Giờ làm việc',
     'btn_viewLesson' => 'XEM BÀI HỌC',
+    'lb_home' => 'Trang chủ',
 ];

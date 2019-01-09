@@ -141,7 +141,7 @@ Framgia E-learning System
          <div class="clearfix"> </div>
       </div>
       <div class="btn_readmore_topic">
-         <a href="#">
+         <a href="{{ route('topic.index') }}">
             <div class="btn-readmore">
                &nbsp;@lang('messages.btn_readmore')
             </div>
