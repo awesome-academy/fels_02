@@ -36,3 +36,16 @@ function ajaxToggleActiveStatus(id, presentStatus){
         }
     });
 }
+
+jQuery(function(){
+    jQuery('#btnDisplayNone').click();
+});
+
+document.getElementById("btnDisplayNone").onclick = function () {
+    document.getElementById("chooseFile").style.display = 'none';
+    $("#file-input").val("");
+};
+
+document.getElementById("btnDisplayBlock").onclick = function () {
+    document.getElementById("chooseFile").style.display = 'block';
+};

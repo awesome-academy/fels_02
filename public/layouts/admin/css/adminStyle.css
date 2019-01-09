@@ -12,7 +12,7 @@
     padding-top: 180px;
 }
 .mb30-userAdmin {
-    width: 136% !important;
+    width: 58em !important;
 }
 .data-tool-add {
     padding-left: 40px;
@@ -33,4 +33,7 @@
 }
 .card {
     width: 180%;
+}
+.long {
+    width: 26em;
 }
