@@ -13,7 +13,6 @@ class Lessons extends Controller
     {
         $displayLessons = Lesson::get();
         $displayTopics = Topic::get();
-
         $topic = Topic::find($topic_id);
         $resultLesson = Lesson::where('topic_id', $topic_id)->paginate(config('setting.number_lessonPaginate'));
 

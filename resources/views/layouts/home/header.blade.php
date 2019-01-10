@@ -1,21 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-   <head>
-      <title>@yield('title')</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="keywords" content="Framgia E-learning System" />
-       {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
-       {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
-       {{ Html::style(asset('layouts/home/css/style.css')) }}
-       {{ Html::style(asset('layouts/home/css/jquery.countdown.css')) }}
-       {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
-       {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
-       {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
-       {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
-       {{ Html::script(asset('js/logoutajax.js')) }}
-       {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
-       {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
+<head>
+    <title>@yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Framgia E-learning System"/>
+    {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
+    {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
+    {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
+    {{ Html::style(asset('layouts/home/css/style.css')) }}
+    {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
+    {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
+    {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
+    {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
+    {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
+    {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
+    {{ Html::script(asset('js/logoutajax.js')) }}
+    {{ Html::style(asset('https://use.fontawesome.com/releases/v5.6.3/css/all.css')) }}
 </head>
 <body>
    <nav class="navbar navbar-default" role="navigation">

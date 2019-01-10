@@ -1,6 +1,6 @@
 @extends('layouts.home.master')
 @section('title')
-    Lesson
+    @lang('messages.lesson_title')
 @endsection
 @section('content')
 <div class="courses_banner">

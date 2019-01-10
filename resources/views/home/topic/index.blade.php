@@ -1,13 +1,13 @@
 @extends('layouts.home.master')
 @section('title')
-Topic
+    @lang('messages.lb_topic')
 @endsection
 @section('content')
 <div class="courses_banner">
     <div class="container">
         <h3>@lang('messages.lb_topic')</h3>
         <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.
+            @lang('messages.lesson_decription')
         </p>
         <div class="breadcrumb1">
             <ul>
