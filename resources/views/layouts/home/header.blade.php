@@ -6,7 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Framgia E-learning System" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
         {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
         {{ Html::style(asset('layouts/home/css/style.css')) }}
@@ -20,8 +19,10 @@
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
         {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
+        {{ Html::style(asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')) }}
     </head>
     <body>
+        <span id="bug" data-bug="@lang('messages.view_bug')"></span>
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -45,6 +46,9 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="javascript:void(0)" id="logout" onclick="return false">@lang('messages.btn_logout')</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{Route('wordfollow.show', Auth::user()->user_id)}}" id="remember">@lang('messages.word_saved')</a>
                                 </li>
                             </ul>
                         </li>
@@ -117,7 +121,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="last"><a href="contact.php">@lang('messages.btn_contact')</a></li>
+                        <li class="last"><a href="#">@lang('messages.btn_contact')</a></li>
+                        <li class="last"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
                     </ul>
                 </div>
             </div>
