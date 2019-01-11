@@ -125,7 +125,7 @@ Framgia E-learning System
                   <img src="images/topics/{{ $topic->picture }}" class="img-responsive wp-post-image" alt=""/>
                   <div></div>
                   <figcaption>
-                     <h3 class="person-title"><a href="event_single.html">{{ $topic->topic_name }}</a></h3>
+                     <h3 class="person-title"><a href="{{ route('lesson.show', $topic->topic_id) }}">{{ $topic->topic_name }}</a></h3>
                      <span class="person-deg">{{ $topic->preview }}</span>
                      <p><a href="">0/20</a></p>
                      <div class="person-social">

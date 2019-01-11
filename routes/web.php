@@ -12,5 +12,6 @@
 */
 
 Route::namespace('Home')->group(function(){
-    Route::resource('home','Home');
+    Route::resource('home', 'Home');
+    Route::resource('lesson', 'Lessons');
 });

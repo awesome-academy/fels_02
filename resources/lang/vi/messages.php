@@ -17,4 +17,5 @@ return [
     'lb_quickLink' => 'Từ khóa nhanh',
     'lb_contactUs' => 'Liên hệ',
     'lb_working' => 'Giờ làm việc',
+    'btn_viewLesson' => 'XEM BÀI HỌC',
 ];

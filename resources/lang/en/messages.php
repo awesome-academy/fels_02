@@ -17,4 +17,5 @@ return [
     'lb_quickLink' => 'Quick Link',
     'lb_contactUs' => 'Contact',
     'lb_working' => 'Working Hour',
+    'btn_viewLesson' => 'VIEW LESSON',
 ];
