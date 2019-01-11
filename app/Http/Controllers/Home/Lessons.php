@@ -15,7 +15,7 @@ class Lessons extends Controller
         $displayTopics = Topic::get();
 
         $topic = Topic::find($topic_id);
-        $resultLesson = Lesson::where('topic_id', $topic_id)->paginate(config('setting.number_paginate'));
+        $resultLesson = Lesson::where('topic_id', $topic_id)->paginate(config('setting.number_lessonPaginate'));
 
         return view('home.lesson.index', compact('displayTopics', 'displayLessons', 'resultLesson', 'topic'));
     }
