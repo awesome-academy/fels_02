@@ -17,5 +17,8 @@ return [
     'lb_quickLink' => 'Từ khóa nhanh',
     'lb_contactUs' => 'Liên hệ',
     'lb_working' => 'Giờ làm việc',
+    'sum_word_followed' => 'Tổng số từ đang được theo dõi',
+    'list_word_followed' => 'danh sách các từ vựng đang được theo dõi',
+    'word_remember_title' => 'từ vựng cần nhớ',
     'btn_viewLesson' => 'XEM BÀI HỌC',
 ];

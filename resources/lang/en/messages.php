@@ -17,5 +17,8 @@ return [
     'lb_quickLink' => 'Quick Link',
     'lb_contactUs' => 'Contact',
     'lb_working' => 'Working Hour',
+    'sum_word_followed' => 'Total words are being tracked',
+    'list_word_followed' => 'List of vocabulary being tracked',
+    'word_remember_title' => 'vocabulary to remember',
     'btn_viewLesson' => 'VIEW LESSON',
 ];
