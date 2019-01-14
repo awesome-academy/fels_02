@@ -27,6 +27,7 @@
     {{ Html::style(asset('layouts/admin/css/adminStyle.css')) }}
     {{ Html::style(asset('https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css')) }}
     {{ Html::script(asset('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')) }}
+    {{ Html::script('messages.js') }}
 </head>
 <body class="animsition">
     <div class="page-wrapper">

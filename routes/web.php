@@ -49,6 +49,7 @@ Route::namespace('Home')->middleware('localization')->group(function(){
 });
 
 Route::namespace('Admin')->middleware('localization')->group(function(){
+    Route::resource('adminlesson', 'LessonManager');
     Route::resource('admin', 'HomeAdmin');
     Route::resource('user', 'Users');
     Route::resource('topic-admin', 'TopicsAdmin');

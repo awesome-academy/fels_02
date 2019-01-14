@@ -22,17 +22,32 @@
     height: 50px;
 }
 .bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
     color: black
 }
 .bootstrap-iso form button, .bootstrap-iso form button:hover {
     color: white !important;
-} 
+}
 .asteriskField {
     color: red;
 }
 .card {
     width: 180%;
+}
+.img-preview {
+    width: 28%;
+    height: 50%;
+    margin-bottom: 2%;
+}
+.canduoi {
+    height: 197px;
+}
+.tuychinh {
+    width: 1000px;
+    margin-left: 3%;
+}
+.canduoi2 {
+    padding: 0px;
 }
 .long {
     width: 26em;

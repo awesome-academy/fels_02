@@ -40,4 +40,38 @@ class SocialAccountService
             return $user;
         }
     }
+
+    public static function createOrGetUser2(ProviderUser $providerUser, $social)
+    {
+        $account = SocialAccount::whereProvider($social)
+            ->whereProviderUserId($providerUser->getId())
+            ->first();
+        if ($account)
+        {
+            return $account->user;
+        }
+        else
+        {
+            $email = $providerUser->getEmail() ?? $providerUser->getNickname();
+            $account = new SocialAccount([
+                'provider_user_id' => $providerUser->getId(),
+                'provider' => $social
+            ]);
+            $user = User::whereEmail($email)->first();
+
+            if (!$user)
+            {
+                $user = User::create([
+                    'username' => str_replace(' ', '', $providerUser->getNickname()),
+                    'email' => $email,
+                    'fullname' => $providerUser->getName(),
+                    'password' => bcrypt(str_replace(' ', '', $providerUser->getNickname())),
+                ]);
+            }
+            $account->user()->associate($user);
+            $account->save();
+
+            return $user;
+        }
+    }
 }

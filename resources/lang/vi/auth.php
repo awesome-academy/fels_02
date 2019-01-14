@@ -26,6 +26,7 @@ return [
     'loginfail' => 'Đăng nhập thất bại',
     'createfail' => 'Tạo tài khoản thất bại',
     'loginfail' => 'Đăng nhập thất bại',
+    'errors' => 'Đã xảy ra lỗi',
     'forgot' => ' Quen Mat Khau ?',
     'get_password' => 'Nhan vao Day',
     'send' => 'Gui',
