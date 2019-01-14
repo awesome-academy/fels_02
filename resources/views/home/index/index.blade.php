@@ -1,6 +1,6 @@
 @extends('layouts.home.master')
 @section('title')
-Framgia E-learning System
+    @lang('messages.index_title')
 @endsection
 @section('content')
 <div class="banner">

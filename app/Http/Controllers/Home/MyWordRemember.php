@@ -17,6 +17,7 @@ class MyWordRemember extends Controller
         $displayLessons = Lesson::get();
         $wordRemeber = DB::table('word_remember as wd')->join('lesson_detail as ld', 'wd.word_id' , '=', 'ld.word_id')->where('user_id', $id)->get();
         $sum = DB::table('word_remember')->where('user_id', $id)->count();
+
         return view('home.wordfollow.index', compact('displayTopics', 'displayLessons', 'wordRemeber', 'sum'));
     }
 }

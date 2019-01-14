@@ -37,21 +37,19 @@ $(document).ready(function(){
 	var browser = navigator.userAgent.toLowerCase();
 
 	if(!Modernizr.input.required || (browser.indexOf("safari") != -1 && browser.indexOf("chrome") == -1)) {
-		$('form').submit(function() {
-			$('.popup').remove();
-			if(!$('.email').val() || $('.email').val() == 'Input your e-mail address here...') {
-				$('form').append('<p class="popup">Please fill out this field.</p>');
-				$('.email').focus();
-				return false;
-			}
-		});
-		$('.email').keydown(function() {
-			$('.popup').remove();
-		});
-		$('.email').blur(function() {
-			$('.popup').remove();
-		});
-	}
-
-
+        $('form').submit(function () {
+            $('.popup').remove();
+            if (!$('.email').val() || $('.email').val() == 'Input your e-mail address here...') {
+                $('form').append('<p class="popup">Please fill out this field.</p>');
+                $('.email').focus();
+                return false;
+            }
+        });
+        $('.email').keydown(function () {
+            $('.popup').remove();
+        });
+        $('.email').blur(function () {
+            $('.popup').remove();
+        });
+    }
 });
