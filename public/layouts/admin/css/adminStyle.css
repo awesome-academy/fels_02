@@ -12,13 +12,13 @@
     padding-top: 180px;
 }
 .mb30-userAdmin {
-    width: 58em !important;
+    width: 68em !important;
 }
 .data-tool-add {
     padding-left: 40px;
 }
 .image a img {
-    width: 40px;
+    width: 75px;
     height: 50px;
 }
 .bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
@@ -35,8 +35,8 @@
     width: 180%;
 }
 .img-preview {
-    width: 28%;
-    height: 50%;
+    width: 150px;
+    height: 135px;
     margin-bottom: 2%;
 }
 .canduoi {
@@ -51,4 +51,10 @@
 }
 .long {
     width: 26em;
+}
+.cofigaudio {
+    margin: 10px auto;
+}
+.canlebot {
+    margin-bottom: -48px;
 }

@@ -24,63 +24,50 @@
                             <div class="table-responsive table-data">
                                 <table class="table">
                                     <thead>
-                                        <tr>
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>@lang('adminMess.lb_lesson_name')</td>
-                                            <td>@lang('adminMess.lb_lesson_picture')</td>
-                                            <td>@lang('adminMess.lb_lesson_preview')</td>
-                                            <td>@lang('adminMess.lb_topic')</td>
-                                        </tr>
+                                    <tr>
+                                        <td>@lang('adminMess.lb_lesson_name')</td>
+                                        <td>@lang('adminMess.lb_lesson_picture')</td>
+                                        <td>@lang('adminMess.lb_lesson_preview')</td>
+                                        <td>@lang('adminMess.lb_topic')</td>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($displayLesson as $ls)
-                                            <tr>
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <div class="table-data__info">
-                                                        <h6>{{ $ls->lesson_name }}</h6>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="image">
-                                                        <a href="{{asset('images/lessons/'.$ls->picturels)}}">
-                                                            <img src="{{asset('images/lessons/'.$ls->picturels)}}" alt="Admin"/>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>{{ $ls->preview }}</span>
-                                                </td>
-                                                <td>
-                                                    <span>{{ $ls->topic_name }}</span>
-                                                </td>
-                                                <td>
-                                                    <span class="more">
-                                                        <button type="button" data-toggle="modal"  data-target="#exampleModal" data-lessonid="{{$ls->lesson_id}}" data-lessonname="{{$ls->lesson_name}}" data-preview="{{$ls->preview}}" data-picture="{{$ls->picturels}}" data-topicid="{{$ls->topic_id}}"> <i class="zmdi zmdi-edit"></i></button>
-                                                    </span>
-                                                    <span class="more">
-                                                        <a href="javascript:void(0)" class="btn_del" data-confirm="{{trans('adminMess.confirmDelete')}}">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </a>
-                                                        {!! Form::open(['method' => 'DELETE', 'route' => ['adminlesson.destroy',$ls->lesson_id], 'id' => 'delete-form']) !!}
-                                                        {!! Form::close() !!}
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                    @foreach($displayLesson as $ls)
+                                        <tr>
+                                            <td>
+                                                <div class="table-data__info">
+                                                    <h6>{{ $ls->lesson_name }}</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="image">
+                                                    <a href="{{asset('images/lessons/'.$ls->picturels)}}">
+                                                        <img src="{{asset('images/lessons/'.$ls->picturels)}}" alt="Admin"/>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>{{ $ls->preview }}</span>
+                                            </td>
+                                            <td>
+                                                <span>{{ $ls->topic_name }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="more">
+                                                    <button type="button" data-toggle="modal"  data-target="#exampleModal" data-lessonid="{{$ls->lesson_id}}" data-lessonname="{{$ls->lesson_name}}" data-preview="{{$ls->preview}}" data-picture="{{$ls->picturels}}" data-topicid="{{$ls->topic_id}}"> <i class="zmdi zmdi-edit"></i></button>
+                                                </span>
+                                                <span class="more">
+                                                    <a href="#" class="btn_del_lesson" onclick="return del_lesson({{$ls->lesson_id}});">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </a>
+                                                    {!! Form::open(['method' => 'DELETE', 'id' => 'form-lesson']) !!}
+                                                    {!! Form::close() !!}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
-                                {{ $displayLesson->links() }}
                             </div>
                         </div>
                     </div>

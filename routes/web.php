@@ -54,8 +54,9 @@ Route::namespace('Home')->middleware('localization')->group(function(){
 });
 
 Route::namespace('Admin')->middleware('localization')->group(function(){
-    Route::resource('adminlesson', 'LessonManager');
+    Route::resource('adminword', 'WordManager');
     Route::resource('admin', 'HomeAdmin');
+    Route::resource('adminlesson', 'LessonManager');
     Route::resource('user', 'Users');
     Route::resource('topic-admin', 'TopicsAdmin');
     Route::post('/user/update-status', [

@@ -11,15 +11,31 @@ $(document).ready(function(){
 
 });
 
-$('.btn_del').on('click', function (e) {
-    if (confirm($(this).data('confirm'))) {
-        $('#delete-form').submit();
+function del_lesson($lesson_id){
+    if (confirm(Lang.get('adminMess.del_confirm'))) {
+        $("#form-lesson").attr("action", ['adminlesson/'+$lesson_id])
+        $("#form-lesson").submit();
+
         return true;
     }
     else {
+
         return false;
     }
-});
+};
+
+function del_word($word_id){
+    if (confirm(Lang.get('adminMess.del_confirm'))) {
+        $("#form-word").attr("action", ['adminword/'+$word_id])
+        $("#form-word").submit();
+
+        return true;
+    }
+    else {
+
+        return false;
+    }
+};
 
 function ajaxToggleActiveStatus(id, presentStatus){
     $.ajaxSetup({
@@ -54,9 +70,48 @@ $(document).ready(function () {
         var stringPicture="images/lessons/" + picture;
         modal.find('.modal-body #xemtruoc').attr("src", stringPicture);
         modal.find('#form-edit-lesson').attr("action", ['adminlesson/'+lessonid]);
-        modal.find('.modal-body #xemtruoc').attr("src", stringPicture);
+        modal.find('.modal-body #img-preview').attr("src", stringPicture);
         $("#topic_id option[value='" + topicid + "']").attr("selected", "selected");
     });
+    $('#editWord').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var wordid = button.data('wordid');
+        var wordname = button.data('wordname');
+        var picture = button.data('picture');
+        var sound = button.data('sound');
+        var spell = button.data('spell');
+        var translate = button.data('translate');
+        var idlesson = button.data('idlesson');
+        var filepath = button.data('path')+picture;
+        var audiofilepath = button.data('audiopath')+sound;
+        var modal = $(this);
+        modal.find('.modal-body #word_id').val(wordid);
+        modal.find('.modal-body #word_name').val(wordname);
+        modal.find('.modal-body #spelling').val(spell);
+        modal.find('.modal-body #translate').val(translate);
+        modal.find('#word_form_edit').attr("action", ['adminword/'+wordid]);
+        $("#lesson_id option[value='" + idlesson + "']").attr("selected", "selected");
+        modal.find('.modal-body #img-preview').attr("src", filepath);
+        modal.find('.modal-body #pre_audio').attr("src", audiofilepath);
+    });
+
+    function readURLPicTure(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#img-preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#picture").change(function() {
+        readURLPicTure(this);
+    });
+
 });
 
 jQuery(function(){
