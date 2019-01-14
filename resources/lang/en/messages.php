@@ -31,4 +31,6 @@ return [
     'lesson_detail_title' => 'LESSON DETAIL',
     'index_title' => 'Framgia E-learning System',
     'lesson_decription' => 'All Topic',
+    'lang.en' => 'English',
+    'lang.vi' => 'Vietnamese',
 ];

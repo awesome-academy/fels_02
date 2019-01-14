@@ -98,3 +98,9 @@
 .grid_4 img {
 	width: 79%;
 }
+.selectLang {
+	margin-top: 18px;
+	background-color: #FBB44D;
+	border: none;
+	color: white;
+}
