@@ -30,7 +30,7 @@
                 <div class="form-group">
                     {!! Form::submit(trans('auth.login'), ['class' => 'btn btn-primary btn-lg1 btn-block']) !!}
                 </div>
-                <p>@lang('auth.linkregister') <a href="" title='@lang('auth.register')' >@lang('auth.register')</a></p>
+                <p>@lang('auth.linkregister') <a href="{{route('register.index')}}" title='@lang('auth.register')' >@lang('auth.register')</a></p>
             {!! Form::close() !!}
         </div>
     </div>
