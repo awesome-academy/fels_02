@@ -4,6 +4,7 @@ return [
     'btn_login' => 'Đăng nhập',
     'btn_search' => 'Tìm kiếm',
     'btn_home' => 'Trang chủ',
+    'btn_logout' => 'Dang Xuat',
     'btn_about' => 'Giới thiệu',
     'btn_topic' => 'Chủ đề',
     'lb_topic' => 'CHỦ ĐỀ',
@@ -17,6 +18,9 @@ return [
     'lb_quickLink' => 'Từ khóa nhanh',
     'lb_contactUs' => 'Liên hệ',
     'lb_working' => 'Giờ làm việc',
+    'sum_word_followed' => 'Tổng số từ đang được theo dõi',
+    'list_word_followed' => 'danh sách các từ vựng đang được theo dõi',
+    'word_remember_title' => 'từ vựng cần nhớ',
     'btn_viewLesson' => 'XEM BÀI HỌC',
     'lb_home' => 'Trang chủ',
 ];

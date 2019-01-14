@@ -3,6 +3,7 @@
 return [
     'btn_login' => 'Login',
     'btn_search' => 'Search',
+    'btn_logout' =>'Logout',
     'btn_home' => 'Home',
     'btn_about' => 'About',
     'btn_topic' => 'Topic',
@@ -17,6 +18,9 @@ return [
     'lb_quickLink' => 'Quick Link',
     'lb_contactUs' => 'Contact',
     'lb_working' => 'Working Hour',
+    'sum_word_followed' => 'Total words are being tracked',
+    'list_word_followed' => 'List of vocabulary being tracked',
+    'word_remember_title' => 'vocabulary to remember',
     'btn_viewLesson' => 'VIEW LESSON',
     'lb_home' => 'Home',
 ];
