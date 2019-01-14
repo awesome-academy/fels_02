@@ -3,6 +3,7 @@
 return [
     'btn_login' => 'Login',
     'btn_search' => 'Search',
+    'btn_logout' =>'Logout',
     'btn_home' => 'Home',
     'btn_about' => 'About',
     'btn_topic' => 'Topic',

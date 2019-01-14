@@ -6,15 +6,17 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="keywords" content="Framgia E-learning System" />
       <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-      {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
-      {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
-      {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
-      {{ Html::style(asset('layouts/home/css/style.css')) }}
-      {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
-      {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
-      {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
-      {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
-      {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
+       {{ Html::style(asset('layouts/home/css/bootstrap-3.1.1.min.css')) }}
+       {{ Html::style(asset('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700')) }}
+       {{ Html::style(asset('layouts/home/css/style.css')) }}
+       {{ Html::style(asset('layouts/home/css/jquery.countdown.css')) }}
+       {{ Html::style(asset('layouts/home/css/font-awesome.css')) }}
+       {{ Html::style(asset('layouts/home/css/mystyle.css')) }}
+       {{ Html::style(asset('layouts/home/css/flag-icon.css')) }}
+       {{ Html::script(asset('layouts/home/js/jquery.min.js')) }}
+       {{ Html::script(asset('js/logoutajax.js')) }}
+       {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
+       {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
 </head>
 <body>
    <nav class="navbar navbar-default" role="navigation">
@@ -30,9 +32,20 @@
          </div>
          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li class="dropdown">
-                  <a href="#"><i class="fa fa-user"></i><span>@lang('messages.btn_login')</span></a>
-               </li>
+                @guest
+                    <li class="dropdown">
+                        <a href="{{route('login.index')}}"><i class="fa fa-user"></i><span>@lang('messages.btn_login')</span></a>
+                    </li>
+                @else
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span> {{ Auth::user()->username }}</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:void(0)" id="logout" onclick="return false">@lang('messages.btn_logout')</a>
+                            </li>
+                        </ul>
+                    </li>
+                @endguest
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span>Vietnamese</span></a>
                   <ul class="dropdown-menu">
@@ -67,35 +80,35 @@
          </div>
          <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-               <li><a href="{{ route('home.index') }}">@lang('messages.btn_home')</a></li>
-               <li><a href="#">@lang('messages.btn_about')</a></li>
-               <li class="dropdown mega-dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('messages.btn_topic')<span class="caret"></span></a>        
-                  <div class="dropdown-menu mega-dropdown-menu">
-                     <div class="container-fluid">
-                        <div class="tab-content">
-                           @foreach($displayTopics as $key => $topic)
-                           <div class="tab-pane active" id="lesson{{ $topic->topic_id }}">
-                              <ul class="nav-list list-inline">
-                                 @foreach($displayLessons as $key => $lesson)
-                                    @if($lesson->topic_id == $topic->topic_id)
-                                       <li><a href="#"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
-                                    @endif
-                                 @endforeach
-                              </ul>
-                           </div>
-                           @endforeach
+                <li><a href="{{ route('home.index') }}">@lang('messages.btn_home')</a></li>
+                <li><a href="#">@lang('messages.btn_about')</a></li>
+                <li class="dropdown mega-dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('messages.btn_topic')<span class="caret"></span></a>
+                    <div class="dropdown-menu mega-dropdown-menu">
+                        <div class="container-fluid">
+                            <div class="tab-content">
+                                @foreach($displayTopics as $key => $topic)
+                                    <div class="tab-pane active" id="lesson{{ $topic->topic_id }}">
+                                        <ul class="nav-list list-inline">
+                                            @foreach($displayLessons as $key => $lesson)
+                                                @if($lesson->topic_id == $topic->topic_id)
+                                                    <li><a href="#"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
-                     </div>
-                     <ul class="nav nav-tabs" role="tablist">
-                        @foreach($displayTopics as $key => $topic)
-                           <li><a href="#lesson{{ $topic->topic_id }}" id="auto_load" role="tab" data-toggle="tab">{{ $topic->topic_name }}</a></li>
-                        @endforeach
-                        {{ Html::script(asset('layouts/home/js/autoloadBtnTopic.js')) }}
-                     </ul>
-                  </div>
-               </li>
-               <li class="last"><a href="contact.php">@lang('messages.btn_contact')</a></li>
+                        <ul class="nav nav-tabs" role="tablist">
+                            @foreach($displayTopics as $key => $topic)
+                                <li><a href="#lesson{{ $topic->topic_id }}" id="auto_load" role="tab" data-toggle="tab">{{ $topic->topic_name }}</a></li>
+                            @endforeach
+                            {{ Html::script(asset('layouts/home/js/autoloadBtnTopic.js')) }}
+                        </ul>
+                    </div>
+                </li>
+                <li class="last"><a href="contact.php">@lang('messages.btn_contact')</a></li>
             </ul>
          </div>
       </div>
