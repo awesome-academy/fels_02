@@ -16,6 +16,7 @@ Route::namespace('Authentication')->group(function() {
 });
 Route::namespace('Home')->group(function(){
     Route::resource('home', 'Home');
+    Route::resource('wordfollow', 'MyWordRemember');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
 });
