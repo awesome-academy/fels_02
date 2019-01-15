@@ -31,4 +31,6 @@ return [
     'lesson_detail_title' => 'Chi Tiết Bài Học',
     'index_title' => 'Hệ thống học tập điện tử Framgia',
     'lesson_decription' => 'Tất cả các chủ đề',
+    'lang.en' => 'Tiếng Anh',
+    'lang.vi' => 'Tiếng Việt',
 ];

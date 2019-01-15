@@ -40,5 +40,6 @@
     </div>
 {{ Html::script(asset('layouts/home/js/jquery.countdown.js')) }}
 {{ Html::script(asset('layouts/home/js/script.js')) }}
+{{ Html::script(asset('layouts/home/js/homeScript.js')) }}
 </body>
 </html>
