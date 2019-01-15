@@ -25,7 +25,8 @@
     {{ Html::style(asset('layouts/admin/vendor/perfect-scrollbar/perfect-scrollbar.css')) }}
     {{ Html::style(asset('layouts/admin/css/theme.css')) }}
     {{ Html::style(asset('layouts/admin/css/adminStyle.css')) }}
-
+    {{ Html::style(asset('https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css')) }}
+    {{ Html::script(asset('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')) }}
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -91,8 +92,7 @@
                                             </div>
                                             
                                             <div class="account-dropdown__footer">
-                                                <a href="">
-                                                    <i class="zmdi zmdi-power"></i>@lang('adminMess.btn_logout')</a>
+                                                <a href=""><i class="zmdi zmdi-power"></i>@lang('adminMess.btn_logout')</a>
                                             </div>
                                         </div>
                                     </div>

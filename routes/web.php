@@ -30,4 +30,8 @@ Route::namespace('Home')->middleware('localization')->group(function(){
 });
 Route::namespace('Admin')->group(function(){
     Route::resource('admin', 'HomeAdmin');
+    Route::resource('user', 'Users');
+    Route::post('/user/update-status',[
+        'uses' => 'Users@updateStatus',
+    ]);
 });
