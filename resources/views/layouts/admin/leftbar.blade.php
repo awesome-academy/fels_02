@@ -21,6 +21,11 @@
                                 <i class="fas fa-user"></i>@lang('adminMess.lb_user')
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('topic-admin.index') }}">
+                                <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -19,4 +19,5 @@ return [
     'folder_user_img' => 'images/users',
     'status_userActive1' => 1,
     'status_userActive0' => 0,
+    'folder_topic_img' => 'images/topics',
 ];
