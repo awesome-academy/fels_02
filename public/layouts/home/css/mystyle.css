@@ -104,3 +104,15 @@
 	border: none;
 	color: white;
 }
+.tab {
+    padding-right:10px;
+}
+.fb {
+    background-color: #3B579D;
+}
+.gg {
+    background-color:#c9302c ;
+}
+.tw {
+    background-color:#00b5e9 ;
+}
