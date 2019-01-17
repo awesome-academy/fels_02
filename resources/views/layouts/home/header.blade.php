@@ -121,8 +121,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="last"><a href="#">@lang('messages.btn_contact')</a></li>
-                        <li class="last"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
+                        <li class="navbar-nav"><a href="#">@lang('messages.btn_contact')</a></li>
+                        <li class="navbar-nav"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
                     </ul>
                 </div>
             </div>

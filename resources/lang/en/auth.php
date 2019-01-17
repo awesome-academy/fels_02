@@ -28,4 +28,10 @@ return [
     'createsuccessfull' => 'Welcome! Your account has been successfully created!',
     'loginfail' => 'Login Failure',
     'createfail' => 'Create Account Failure',
+    'forgot' => 'Forgot Password ?',
+    'get_password' => 'Click Here',
+    'send' => 'Send',
+    'first_mail' => 'New Password of account',
+    'middle_mail' => ' has email : ',
+    'last_mail' => ' is: ',
 ];

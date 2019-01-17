@@ -26,4 +26,10 @@ return [
     'loginfail' => 'Đăng nhập thất bại',
     'createfail' => 'Tạo tài khoản thất bại',
     'loginfail' => 'Đăng nhập thất bại',
+    'forgot' => ' Quen Mat Khau ?',
+    'get_password' => 'Nhan vao Day',
+    'send' => 'Gui',
+    'first_mail' => 'Mat Khau Moi Cua Tai Khoan',
+    'middle_mail' => 'Co Email:',
+    'last_mail' => 'La:',
 ];
