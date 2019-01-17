@@ -17,9 +17,8 @@ class CreateTopicTable extends Migration
             $table->increments('topic_id');
             $table->string('topic_name');
             $table->string('preview');
-            $table->string('picture');
+            $table->string('picture')->default('default.jpeg');;
             $table->integer('parent_id')->default(0);
-            $table->timestamp('created_at');
         });
     }
 

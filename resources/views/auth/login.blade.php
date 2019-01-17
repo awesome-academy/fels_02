@@ -29,6 +29,9 @@
                 </div>
                 <div class="form-group">
                     {!! Form::submit(trans('auth.login'), ['class' => 'btn btn-primary btn-lg1 btn-block']) !!}
+                    <a href="redirect/facebook" class="btn btn-primary btn-lg1 btn-block fb"><i class="fa fa-facebook tab"></i> @lang('auth.loginfb')</a>
+                    <a href="redirect/google" class="btn btn-primary btn-lg1 btn-block gg"><i class="fa fa-google-plus tab"></i> @lang('auth.logingg')</a>
+                    <a href="redirect/twitter" class="btn btn-primary btn-lg1 btn-block tw"><i class="fa fa-twitter tab"></i> @lang('auth.logintw')</a>
                 </div>
                 <p>@lang('auth.linkregister') <a href="{{route('register.index')}}" title='@lang('auth.register')' >@lang('auth.register')</a></p>
             {!! Form::close() !!}

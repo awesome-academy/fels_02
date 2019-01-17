@@ -21,6 +21,9 @@ Route::namespace('Authentication')->middleware('localization')->group(function()
     Route::resource('login', 'Login');
     Route::resource('logout', 'Logout');
     Route::resource('register', 'Register');
+    Route::get('/redirect/{social}', 'Social@redirect');
+    Route::get('/callback/{social}', 'Social@callback');
+
 });
 
 Route::namespace('Home')->middleware('localization')->group(function(){
@@ -35,7 +38,8 @@ Route::namespace('Admin')->group(function(){
     Route::resource('admin', 'HomeAdmin');
     Route::resource('user', 'Users');
     Route::resource('topic-admin', 'TopicsAdmin');
-    Route::post('/user/update-status',[
+    Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
+
 });

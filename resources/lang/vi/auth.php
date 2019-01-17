@@ -5,6 +5,7 @@ return [
     'login' => 'Dang Nhap',
     'loginfb' => 'Dang Nhap Bang FaceBook',
     'logingg' => 'Dang Nhap Bang Google',
+    'logintw' => 'Dang Nhap Bang Twitter',
     'username' => 'Ten Tai Khoan',
     'password' => 'Mat Khau',
     'repassword' => 'Xac nhan mat khau',
