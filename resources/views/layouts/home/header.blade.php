@@ -37,6 +37,25 @@
                             <a href="{{route('login.index')}}"><i class="fa fa-user"></i><span>@lang('messages.btn_login')</span></a>
                         </li>
                         @else
+                        <li onclick="markNotificationAsRead('{{count(auth()->user()->unreadNotifications)}}')">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell">{{count(auth()->user()->unreadNotifications)}}</i>
+                                <span>@lang('messages.lb_notification')</span>
+                            </a>
+                             <ul class="dropdown-menu">
+                                @if(count(auth()->user()->unreadNotifications) > 0)
+                                    @foreach(auth()->user()->unreadNotifications as $notification)
+                                        <li>
+                                            @include('layouts.admin.notification.create_topic')
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li>
+                                        @lang('adminMess.lb_noNotification')
+                                    </li>
+                                @endif
+                             </ul>
+                          </li>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span> {{ Auth::user()->username }}</span></a>
                             <ul class="dropdown-menu">

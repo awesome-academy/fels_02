@@ -16,16 +16,18 @@
                     <a class="js-arrow" href="#">
                         <i class="fas fa-suitcase"></i>@lang('adminMess.lb_manage')</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
-                        <li>
-                            <a href="{{ route('user.index') }}">
-                                <i class="fas fa-user"></i>@lang('adminMess.lb_user')
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('topic-admin.index') }}">
-                                <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
-                            </a>
-                        </li>
+                        @if(Auth::user()->role_id === config('setting.numberDefault1'))
+                            <li>
+                                <a href="{{ route('user.index') }}">
+                                    <i class="fas fa-user"></i>@lang('adminMess.lb_user')
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('topic-admin.index') }}">
+                                    <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
             </ul>

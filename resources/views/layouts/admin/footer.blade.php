@@ -28,5 +28,6 @@
     {{ Html::script(asset('layouts/admin/vendor/select2/select2.min.js')) }}
     {{ Html::script(asset('layouts/admin/js/main.js')) }}
     {{ Html::script(asset('layouts/admin/js/adminScript.js')) }}
+    {{ Html::script(asset('js/main.js')) }}
 </body>
 </html>

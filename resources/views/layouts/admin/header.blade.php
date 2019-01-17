@@ -42,29 +42,27 @@
                             {!! Form::close() !!}
                             <div class="header-button">
                                 <div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
+                                    <div class="noti__item js-item-menu" onclick="markNotificationAsRead('{{count(auth()->user()->unreadNotifications)}}')">
                                         <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
+                                        <span class="quantity">{{count(auth()->user()->unreadNotifications)}}</span>
                                         <div class="notifi-dropdown js-dropdown">
+                                            
+                                            @if(count(auth()->user()->unreadNotifications) > 0)
+                                                @foreach(auth()->user()->unreadNotifications as $notification)
+                                                    <div class="notifi__item">
+                                                        <div class="bg-c1 img-cir img-40">
+                                                            <i class="zmdi zmdi-email-open"></i>
+                                                        </div>
+                                                        @include('layouts.admin.notification.'.snake_case(class_basename($notification->type)))
+                                                    </div>
+                                                @endforeach
+                                            @else
                                             <div class="notifi__title">
                                                 <p>
-                                                    @lang('adminMess.lb_youHave')
-                                                        <span>3</span> 
-                                                    @lang('adminMess.lb_newNoti')
+                                                    @lang('adminMess.lb_noNotification')
                                                 </p>
                                             </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>@lang('adminMess.lb_haveMess')</p>
-                                                    <span class="date">10/04/2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="">@lang('adminMess.btn_allNoti')</a>
-                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

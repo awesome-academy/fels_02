@@ -2,11 +2,8 @@
 
 return [
     'lb_search...' => 'Search...',
-    'lb_youHave' => 'You have',
-    'lb_newNoti' => 'new notification',
     'btn_search' => 'Search',
     'lb_haveMess' => 'You have new message',
-    'btn_allNoti' => 'View all notification',
     'lb_home' => 'Home',
     'lb_manage' => 'Manage',
     'lb_user' => 'Users',
@@ -79,4 +76,13 @@ return [
     'lb_noChoosePicture' => 'Not Change',
     'lb_choosePicture' => 'Change Picture',
     'messFindFail' => 'No id found',
+    'mail_content' => 'A new topic created',
+    'lb_noNotification' => 'No new notice',
+    'create_topic' => 'just created a topic',
+    'mail_dear' => 'Dear User,',
+    'mail_line1' => 'A new topic has just been created. There will be lots of interesting lessons in this topic!',
+    'mail_line2' => 'To view this topic, click the button below.',
+    'mail_line3' => 'Thank you for using our website!',
+    'mail_action' => 'View new topic',
+    'mail_subject' => 'New Topic',
 ];

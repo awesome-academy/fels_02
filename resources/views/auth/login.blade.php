@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-
+    @include('common.errors')
     <div class="courses_box1">
         <div class="container">
             {!! Form::open(['method' => 'post', 'route' => 'login.store', 'class' => 'login']) !!}

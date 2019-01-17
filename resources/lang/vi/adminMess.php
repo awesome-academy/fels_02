@@ -2,11 +2,8 @@
 
 return [
     'lb_search...' => 'Tìm kiếm...',
-    'lb_youHave' => 'Bạn có',
-    'lb_newNoti' => 'thông báo mới',
     'btn_search' => 'Tìm kiếm',
     'lb_haveMess' => 'Bạn có tin nhắn',
-    'btn_allNoti' => 'Xem tất cả thông báo',
     'lb_home' => 'Trang chủ',
     'lb_manage' => 'Quản lý',
     'lb_user' => 'Người dùng',
@@ -79,4 +76,13 @@ return [
     'lb_noChoosePicture' => 'Không đổi',
     'lb_choosePicture' => 'Đổi hình ảnh',
     'messFindFail' => 'Không tìm thấy id',
+    'mail_content' => 'Có một chủ đề vừa được tạo',
+    'lb_noNotification' => 'Không có thông báo mới',
+    'create_topic' => 'vừa tạo tạo một chủ đề',
+    'mail_dear' => 'Kính gửi ngưòi dùng,',
+    'mail_line1' => 'Một chủ đề mới vừa được tạo. Sẽ có rất nhiều bài học thú vị trong chủ đề này !',
+    'mail_line2' => 'Để xem chủ đề này, nhấp vào nút bên dưới.',
+    'mail_line3' => 'Cám ơn vì đã sử dụng trang web của chúng tôi !',
+    'mail_action' => 'Xem chủ đề mới',
+    'mail_subject' => 'Chủ đề mới',
 ];

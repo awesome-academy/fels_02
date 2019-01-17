@@ -34,7 +34,7 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('topic', 'Topics');
 });
 
-Route::namespace('Admin')->group(function(){
+Route::namespace('Admin')->middleware('checkadmin')->group(function(){
     Route::resource('admin', 'HomeAdmin');
     Route::resource('user', 'Users');
     Route::resource('topic-admin', 'TopicsAdmin');
@@ -42,4 +42,8 @@ Route::namespace('Admin')->group(function(){
         'uses' => 'Users@updateStatus',
     ]);
 
+});
+
+Route::get('/markAsRead', function(){
+    auth()->user()->unreadNotifications->markAsRead();
 });
