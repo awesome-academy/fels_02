@@ -13,3 +13,9 @@
 @if (Session::has('messagecreate'))
     <script> alert('{{ Session::get('messagecreate')}}')</script>
 @endif
+@if (Session::has('msgTestSuccess'))
+    <script> alert('{{ Session::get('msgTestSuccess')}}')</script>
+@endif
+@if (Session::has('msgTestFail'))
+    <script> alert('{{ Session::get('msgTestFail')}}')</script>
+@endif

@@ -55,14 +55,15 @@
                                           <div class="wordToday">
                                              <h2>{{ $word->word_name }}</h2>
                                              <span>{{ $word->spelling }}</span>
+                                             <img src="/layouts/home/images/speaker.png" alt="spelling" class="img-speaker" onclick="document.getElementById('myTune{{ $word->word_id }}').play()">
                                              <p>{{ $word->translate }}</p>
                                           </div>
                                           <div class="img-word">
-                                             <audio controls>
-                                                <source src="audio/{{ $word->sound }}" type="audio/mpeg">
-                                             </audio>
                                              <img src="images/words/{{ $word->picture }}" alt="">
                                           </div>
+                                          <audio id="myTune{{ $word->word_id }}">
+                                             <source src="audio/{{ $word->sound }}">
+                                          </audio>
                                        </tbody>
                                     </table>
                                  </li>
@@ -87,7 +88,7 @@
                <div id="myTabContent" class="tab-content">
                   @foreach($displayTopicToday as $key => $topicToday)
                      <div role="tabpanel" class="tab-pane fade" id="topic-today-{{ $topicToday->topic_id }}">
-                        @foreach($displayLessons as $key => $lesson)
+                        @foreach($lessonsForToday as $key => $lesson)
                            @if($lesson->topic_id == $topicToday->topic_id)
                               <div class="events_box">
                                  <div class="event_left">
@@ -98,7 +99,7 @@
                                  <div class="event_right">
                                     <h3><a href="#">{{ $lesson->lesson_name }}</a></h3>
                                     <p>{{ $lesson->preview }}</p>
-                                    <a href="#">
+                                    <a href="{{ route('lessondetail.show', $lesson->lesson_id) }}">
                                        <div class="btn-readmore">
                                           &nbsp;@lang('messages.btn_readmore')
                                        </div>
