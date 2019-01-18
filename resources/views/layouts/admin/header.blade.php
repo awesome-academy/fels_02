@@ -27,6 +27,11 @@
     {{ Html::style(asset('layouts/admin/css/adminStyle.css')) }}
     {{ Html::style(asset('https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css')) }}
     {{ Html::script(asset('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')) }}
+    {{ Html::style(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css')) }}
+    {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')) }}
+    {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js')) }}
+
+ {{-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> --}}
 </head>
 <body class="animsition">
     <div class="page-wrapper">
