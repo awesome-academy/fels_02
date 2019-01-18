@@ -10,7 +10,6 @@ class WordRemember extends Model
     protected $table = 'word_remember';
     protected $primaryKey = 'word_remember_id';
     public $timestamps = true;
-    const CREATED_AT = 'date_learnded';
     protected $fillable = [
         'user_id',
         'word_id',

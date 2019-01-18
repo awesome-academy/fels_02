@@ -41,14 +41,17 @@ Route::namespace('Home')->middleware('localization')->group(function(){
         'uses' => 'TestLessons@testLesson',
         'as' => 'test',
     ]);
+    Route::resource('words', 'Words');
+    Route::post('/wordRemember',[
+        'uses' => 'Words@wordRemember',
+    ]);
 });
 
-Route::namespace('Admin')->group(function(){
+Route::namespace('Admin')->middleware('localization')->group(function(){
     Route::resource('admin', 'HomeAdmin');
     Route::resource('user', 'Users');
     Route::resource('topic-admin', 'TopicsAdmin');
     Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
-
 });

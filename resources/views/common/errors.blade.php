@@ -19,3 +19,7 @@
 @if (Session::has('msgTestFail'))
     <script> alert('{{ Session::get('msgTestFail')}}')</script>
 @endif
+    
+@if (Session::has('msg'))
+    <script> alert('{{ Session::get('msg')}}')</script>
+@endif

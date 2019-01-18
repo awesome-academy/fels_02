@@ -26,4 +26,6 @@ return [
     'numberDefault0' => 0,
     'numberDefault1' => 1,
     'numberFormat' => 2,
+    'wordsPaginate' => 50,
+    'savedDefault' => 0,
 ];

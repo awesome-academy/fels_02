@@ -6,6 +6,7 @@ $(document).ready(function(){
         container: container,
         todayHighlight: true,
         autoclose: true,
+        endDate: '+0d'
     })
 });
 

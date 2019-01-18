@@ -18,6 +18,7 @@ class CreateLessonDetailTable extends Migration
             $table->string('word_name');
             $table->string('picture')->default('default.jpeg');;
             $table->string('sound');
+            $table->string('word_type');
             $table->string('translate');
             $table->integer('lesson_id');
         });
