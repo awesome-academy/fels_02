@@ -26,6 +26,8 @@ return [
     'numberDefault0' => 0,
     'numberDefault1' => 1,
     'numberFormat' => 2,
+    'numberMonth' => 30,
+    'numberDay' => 1,
     'wordsPaginate' => 50,
     'savedDefault' => 0,
 ];

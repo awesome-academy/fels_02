@@ -32,10 +32,14 @@ Route::namespace('Authentication')->middleware('localization')->group(function()
 Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('test-lesson','TestLessons')->middleware('testlesson');
     Route::resource('home', 'Home');
+    Route::resource('statis', 'Statistical');
     Route::resource('wordfollow', 'MyWordRemember');
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
+    Route::get('/statiss/{id}', [
+        'uses' => 'Statistical@test',
+    ]);
     Route::resource('progress','UserProgress');
     Route::post('/test/{id}',[
         'uses' => 'TestLessons@testLesson',

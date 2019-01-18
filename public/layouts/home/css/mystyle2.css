@@ -102,3 +102,12 @@
     width: 390px;
     height: 215px;
 }
+.op {
+    border: 2px solid;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.op2 {
+    margin: 1% auto;
+}

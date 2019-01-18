@@ -19,6 +19,9 @@
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
         {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
+        {{ Html::style(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css')) }}
+        {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')) }}
+        {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js')) }}
         {{ Html::style(asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')) }}
     </head>
     <body>
@@ -57,8 +60,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i><span>@lang('messages.btn_search')</span></a>
                             <ul class="dropdown-menu search-form">
                                 {!! Form::open(['method'=>'POST']) !!}
-                                {!! Form::text('search', '', ['class'=>'search-text', 'placeholder'=>trans('messages.lb_search')]) !!}
-                                {!! Form::submit('Search', ['class'=>'search-submit']) !!}
+                                    {!! Form::text('search', '', ['class'=>'search-text', 'placeholder'=>trans('messages.lb_search')]) !!}
+                                    {!! Form::submit('Search', ['class'=>'search-submit']) !!}
                                 {!! Form::close() !!}
                             </ul>
                         </li>
@@ -121,8 +124,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="last"><a href="#">@lang('messages.btn_contact')</a></li>
-                        <li class="last"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
+                        <li class="nav nav-tabs"><a href="#">@lang('messages.btn_contact')</a></li>
+                        <li class="nav nav-tabs"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
                     </ul>
                 </div>
             </div>
