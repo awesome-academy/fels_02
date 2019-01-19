@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Notifications\TestLessonNotify;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Topic;
@@ -9,7 +10,10 @@ use App\Models\Lesson;
 use App\Models\LessonDetail;
 use App\Models\TestLesson;
 use App\Models\UserTopic;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
+use Carbon\Carbon;
 
 class TestLessons extends Controller
 {
@@ -90,12 +94,12 @@ class TestLessons extends Controller
         }
     }
 
-    public function testLesson(Request $request, $id)
+    public function testLesson(Request $request, $id_lesson)
     {
         $displayTopics = Topic::get();
         $displayLessons = Lesson::get();
         
-        $lesson = Lesson::where('lesson_id', $id)->first();
+        $lesson = Lesson::where('lesson_id', $id_lesson)->first();
         $topic = Topic::where('topic_id', $lesson->topic_id)->first();
         $lessons = Lesson::where('topic_id', $topic->topic_id)->get();
         $words = LessonDetail::where('lesson_id', $lesson->lesson_id)->get();
@@ -115,11 +119,19 @@ class TestLessons extends Controller
             }
             $oldWords += array($word->word_id => $request->$word_name);
         }
+
         $percent = number_format((($count / $countWord) * 100), config('setting.numberFormat'));
         $this->testLessonInserted($user_id, $count, $percent, $lesson, $test_lesson);
         $this->insertProgress($user_id, $topic_id, $percent);
+        $user = User::where('role_id', '=', 1)->orwhere('role_id', '=', 2)->get();
+        if($percent >= 70)
+        {
+            $test_user = TestLesson::where('lesson_id',$id_lesson)->first();
+            Notification::send($user,new TestLessonNotify($test_user));
+        }
 
-        if ($percent >= config('setting.passPercent') ) {
+        if ($percent >= config('setting.passPercent') ) 
+        {
             $msg = trans('messages.testSuccess');
 
             return view('home.lesson.testLesson', compact('displayTopics', 'displayLessons', 'topic', 'lesson', 'words', 'lessons', 'count', 'username', 'msg', 'percent', 'countWord', 'oldWords'));

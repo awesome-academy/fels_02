@@ -34,6 +34,7 @@
                                 <h4 class="modal-title">@lang('messages.lb_resultTest')</h4>
                             </div>
                         <div class="modal-body">
+                            @if($percent<70)
                             <div class="alert alert-danger alert-dismissible show col col-8" role="alert">
                                 <ul>
                                     <li class="text-danger"> {{ $msg }}</li>
@@ -42,15 +43,31 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            @else
+                            <div class="alert alert-success alert-dismissible show col col-8" role="alert">
+                                <ul>
+                                    <li class="text-success"> {{ $msg }}</li>
+                                </ul>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            @endif
                             <h4>@lang('messages.lb_account') : <span style="color: red">{{$username}}</span></h4>
-                            <h4>@lang('messages.lb_result') : <span style="color: red">{{$count}}/{{$countWord}}</span>(<span>{{$percent}}%</span>)</h4>
+                            <h4>@lang('messages.lb_result') : @if($percent >= 70) <span class="suc">{{$count}}/{{$countWord}}</span>(<span  class="suc">{{$percent}}%</span>) @else <span class="fail">{{$count}}/{{$countWord}}</span>(<span class="fail">{{$percent}}%</span>) @endif</h4>
                             <h3>@lang('messages.lb_answer')</h3>
                             @foreach($words as $key => $word)
                                 <div class="test-list">
                                     <img src="/images/words/{{ $word->picture }}" class="img-test-word">
-                                    <div class="result-img">
-                                        {{$oldWords[$word->word_id]}} (<font color="red">{{$word->word_name}}</font>)
-                                    </div>
+                                    @if($oldWords[$word->word_id] == $word->word_name)
+                                        <div class="result-img">
+                                            {{$oldWords[$word->word_id]}} (<font color="red">{{$word->word_name}}</font>)
+                                        </div>
+                                    @else
+                                        <div class="result-img2">
+                                            {{$oldWords[$word->word_id]}} (<font color="red">{{$word->word_name}}</font>)
+                                        </div>
+                                    @endif
                                     <img src="/layouts/home/images/speaker.png" alt="spelling" class="img-speaker" onclick="return play_single_sound({{$word->word_id}})">
                                     <audio id="audiotag{{ $word->word_id }}">
                                         <source src="/audio/{{ $word->sound }}">
