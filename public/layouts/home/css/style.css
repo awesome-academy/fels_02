@@ -203,7 +203,7 @@ ul.nav_1 li.last{
 }
 /*-- banner --*/
 .banner-bg{
-	background:url(../images/2.jpg) no-repeat center top;
+	background:url(https://theysaidso.com/img/bgs/man_on_the_mountain.jpg) no-repeat center top;
 }
 .banner-bg, .banner-img, .banner-img2{
 	background-size:cover;
@@ -213,11 +213,11 @@ ul.nav_1 li.last{
 	min-height:600px;
 }
 .banner-img{
-	background:url(../images/3.jpg) no-repeat center top;
+	background:url(../images/life.jpg) no-repeat center top;
 	
 }
 .banner-img2{
-	background:url(../images/1.jpg) no-repeat center top;
+	background:url(../images/love.jpg) no-repeat center top;
 }
 .banner-info {
 	 text-align: center;

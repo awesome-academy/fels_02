@@ -10,7 +10,7 @@ use App\Models\LessonDetail;
 
 class Home extends Controller
 {
-	public function index()
+	public function index(Request $request)
 	{
 		$displayTopics = Topic::get();
         $displayLessons = Lesson::get();
