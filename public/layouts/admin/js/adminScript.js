@@ -8,6 +8,29 @@ $(document).ready(function(){
         autoclose: true,
         endDate: '+0d'
     })
+
+    anychart.onDocumentReady(function() {
+        var data = $('#container').data('range');
+        var chart = anychart.column();
+        chart.animation(true);
+        chart.title('Sum test lesson on month');
+        var series = chart.column(data);
+        series.tooltip().titleFormat('{%X}');
+        series.tooltip()
+        .position('center-top')
+        .anchor('center-bottom')
+        .offsetX(0)
+        .offsetY(5)
+        .format('{%Value}{groupsSeparator: }');
+        chart.yScale().minimum(0);
+        chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
+        chart.tooltip().positionMode('point');
+        chart.interactivity().hoverMode('by-x');
+        chart.xAxis().title('Date');
+        chart.yAxis().title('Sum test');
+        chart.container('container');
+        chart.draw();
+    });
 });
 
 $('#btn_del').on('click', function (e) {
@@ -50,3 +73,5 @@ document.getElementById("btnDisplayNone").onclick = function () {
 document.getElementById("btnDisplayBlock").onclick = function () {
     document.getElementById("chooseFile").style.display = 'block';
 };
+
+

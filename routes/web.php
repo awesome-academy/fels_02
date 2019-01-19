@@ -54,24 +54,8 @@ Route::namespace('Admin')->middleware('localization')->group(function(){
     Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
-    Route::get('/', [
+    Route::get('/chart', [
         'uses' => 'Charts@index',
+        'as' => 'admin.chart',
     ]);
-});
-Route::get('api', function(){
-  // Get the number of days to show data for, with a default of 7
-  $days = Input::get('days', 1);
-
-  $range = CarbonCarbon::now()->subDays($days);
-
-  $stats = DB::table('test_lesson')
-    ->where('created_at', '>=', $range)
-    ->groupBy('created_at')
-    ->orderBy('created_at', 'ASC')
-    ->get([
-      DB::raw('Month(created_at) as month'),
-      DB::raw('COUNT(*) as value')
-    ]);
-
-  return $stats;
 });

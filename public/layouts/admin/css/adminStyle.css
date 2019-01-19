@@ -37,3 +37,6 @@
 .long {
     width: 26em;
 }
+#container {
+    height: 30em;
+}

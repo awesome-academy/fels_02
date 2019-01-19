@@ -9,7 +9,7 @@
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
                 <li>
-                    <a href="">
+                    <a href="{{ route('admin.index') }}">
                         <i class="fas fa-tachometer-alt"></i>@lang('adminMess.lb_home')</a>
                 </li>
                 <li class="active has-sub">
@@ -24,6 +24,11 @@
                         <li>
                             <a href="{{ route('topic-admin.index') }}">
                                 <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.chart') }}">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>@lang('adminMess.lb_chart')
                             </a>
                         </li>
                     </ul>
