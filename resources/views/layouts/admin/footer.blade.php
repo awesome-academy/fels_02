@@ -10,6 +10,7 @@
             </div>
         </div>
     </div>
+                        @include('layouts.admin.notifications.showMark')
     {{ Html::script(asset('layouts/admin/vendor/jquery-3.2.1.min.js')) }}
     {{ Html::script(asset('https://code.jquery.com/jquery-1.11.3.min.js')) }}
     {{ Html::script(asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js')) }}
@@ -28,5 +29,7 @@
     {{ Html::script(asset('layouts/admin/vendor/select2/select2.min.js')) }}
     {{ Html::script(asset('layouts/admin/js/main.js')) }}
     {{ Html::script(asset('layouts/admin/js/adminScript.js')) }}
+    {{ Html::script(asset('js/notifyjs.js')) }}
+
 </body>
 </html>

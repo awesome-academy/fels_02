@@ -37,12 +37,12 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
     Route::resource('progress','UserProgress');
-    Route::post('/test/{id}',[
+    Route::post('/test/{id}', [
         'uses' => 'TestLessons@testLesson',
         'as' => 'test',
     ]);
     Route::resource('words', 'Words');
-    Route::post('/wordRemember',[
+    Route::post('/wordRemember', [
         'uses' => 'Words@wordRemember',
     ]);
 });
@@ -54,4 +54,8 @@ Route::namespace('Admin')->middleware('localization')->group(function(){
     Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
+    Route::get('/markAsRead', function (){
+       auth()->user()->unreadNotifications->markAsRead();
+    });
 });
+
