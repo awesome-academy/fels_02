@@ -54,4 +54,8 @@ Route::namespace('Admin')->middleware('localization')->group(function(){
     Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
+    Route::get('/chart', [
+        'uses' => 'Charts@index',
+        'as' => 'admin.chart',
+    ]);
 });

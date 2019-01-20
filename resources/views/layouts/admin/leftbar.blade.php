@@ -26,6 +26,11 @@
                                 <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin.chart') }}">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>@lang('adminMess.lb_chart')
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
