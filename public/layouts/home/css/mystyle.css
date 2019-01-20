@@ -324,3 +324,16 @@
     border-radius: 5px;
     width: 76%;
 }
+.result-img2 {
+    display: inline-block;
+    border: 2px solid red !important;
+    margin-left: 5px;
+    border-radius: 5px;
+    width: 76%;
+}
+.suc {
+    color: green;
+}
+.fail {
+    color: red;
+}

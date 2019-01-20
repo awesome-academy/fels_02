@@ -1893,7 +1893,8 @@ section {
 }
 
 .mess__title, .email__title, .notifi__title {
-    padding: 22px;
+    height: 35px;
+    padding: 4px;
     border-bottom: 1px solid #f2f2f2;
     cursor: default;
 }
@@ -14622,8 +14623,8 @@ section {
 }
 
 .img-40 {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
 }
 
 .img-120 {

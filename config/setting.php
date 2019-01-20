@@ -28,4 +28,6 @@ return [
     'numberFormat' => 2,
     'wordsPaginate' => 50,
     'savedDefault' => 0,
+    'admin_role' => 1,
+    'member_role' => 2,
 ];
