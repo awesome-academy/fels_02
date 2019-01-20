@@ -79,4 +79,5 @@ return [
     'lb_noChoosePicture' => 'Not Change',
     'lb_choosePicture' => 'Change Picture',
     'messFindFail' => 'No id found',
+    'title_admin_index' => 'Admin Dashboard',
 ];

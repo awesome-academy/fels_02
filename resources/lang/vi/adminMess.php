@@ -79,4 +79,5 @@ return [
     'lb_noChoosePicture' => 'Không đổi',
     'lb_choosePicture' => 'Đổi hình ảnh',
     'messFindFail' => 'Không tìm thấy id',
+    'title_admin_index' => ' Trang quản trị',
 ];

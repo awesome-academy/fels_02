@@ -26,6 +26,16 @@
                                 <i class="fas fa-book"></i>@lang('adminMess.lb_topic')
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('adminlesson.index') }}">
+                                <i class="fas fa-book"></i>@lang('adminMess.lb_lesson')
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('adminword.index') }}">
+                                <i class="fab fa-amilia"></i>@lang('adminMess.lb_word')
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
