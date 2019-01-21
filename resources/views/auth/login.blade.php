@@ -32,7 +32,8 @@
                     <a href="redirect/google" class="btn btn-primary btn-lg1 btn-block gg"><i class="fa fa-google-plus tab"></i> @lang('auth.logingg')</a>
                     <a href="redirect/twitter" class="btn btn-primary btn-lg1 btn-block tw"><i class="fa fa-twitter tab"></i> @lang('auth.logintw')</a>
                 </div>
-                <p>@lang('auth.linkregister') <a href="{{route('register.index')}}" title='@lang('auth.register')' >@lang('auth.register')</a></p>
+                <p>@lang('auth.linkregister') <a href="{{route('register.index')}}" title=@lang('auth.register') >@lang('auth.register')</a></p>
+                <p>@lang('auth.forgot')<a href="{{route('forgot.index')}}" title=@lang('auth.forgot') >@lang('auth.get_password')</a></p>
             {!! Form::close() !!}
         </div>
     </div>

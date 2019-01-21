@@ -24,6 +24,7 @@ Route::namespace('Authentication')->middleware('localization')->group(function()
     Route::resource('login', 'Login');
     Route::resource('logout', 'Logout');
     Route::resource('register', 'Register');
+    Route::resource('forgot', 'Forgot');
     Route::get('/redirect/{social}', 'Social@redirect');
     Route::get('/callback/{social}', 'Social@callback');
 

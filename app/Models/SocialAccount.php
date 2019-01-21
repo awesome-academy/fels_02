@@ -8,7 +8,7 @@ class SocialAccount extends Model
 {
     protected $table = 'social_accounts';
     protected $primaryKey = 'user_social_id';
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = [
         'provider_user_id',
         'provider'
