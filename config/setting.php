@@ -24,4 +24,5 @@ return [
     'numberDefault1' => 1,
     'numberDefault3' => 3,
     'link_topic_default' => 'http://127.0.0.1:8000/topic',
+    'link_test_default' => 'http://127.0.0.1:8000/test-lesson/',
 ];
