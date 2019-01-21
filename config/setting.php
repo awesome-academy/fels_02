@@ -30,4 +30,5 @@ return [
     'numberFormat' => 2,
     'wordsPaginate' => 50,
     'savedDefault' => 0,
+    'check_exist_test' => 0,
 ];

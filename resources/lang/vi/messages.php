@@ -57,4 +57,5 @@ return [
     'view_bug' => 'Có lỗi xảy ra',
     'btn_allWord' => 'Tất cả từ vựng',
     'word_saved' => 'Từ Vựng Đã Nhớ',
+    'history' => 'Lịch Sử Hoạt Động',
 ];

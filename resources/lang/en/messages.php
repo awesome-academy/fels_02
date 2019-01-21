@@ -57,4 +57,5 @@ return [
     'view_bug' => 'An error occurred!',
     'btn_allWord' => 'All Words',
     'word_saved' => 'Words saved',
+    'history' => 'History Activities',
 ];

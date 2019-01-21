@@ -11,6 +11,13 @@ class History extends Model
     protected $primaryKey = 'history_id';
     public $timestamps = true;
 
+    protected $fillable = [
+        'user_id',
+        'lesson_id',
+        'content',
+        'isWord',
+    ];
+
     public function lesson()
     {
         return $this->belongsTo(Lesson::class);
