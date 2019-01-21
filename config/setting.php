@@ -22,6 +22,7 @@ return [
     'status_userActive1' => 1,
     'status_userActive0' => 0,
     'folder_topic_img' => 'images/topics',
+    'status_learned' => 1,
     'passPercent' => 70,
     'numberDefault0' => 0,
     'numberDefault1' => 1,

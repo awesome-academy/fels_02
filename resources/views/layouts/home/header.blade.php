@@ -17,6 +17,9 @@
         {{ Html::script(asset('js/logoutajax.js')) }}
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
+        {{ Html::style(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css')) }}
+        {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')) }}
+        {{ Html::script(asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js')) }}
     </head>
     <body>
         <nav class="navbar navbar-default" role="navigation">

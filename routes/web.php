@@ -32,6 +32,10 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
+    Route::resource('statis', 'Statistical');
+    Route::get('/statiss/{id}', [
+        'uses' => 'Statistical@chart',
+    ]);
     Route::resource('test-lesson','TestLessons');
     Route::post('/test/{id}', [
         'uses' => 'TestLessons@testLesson',
