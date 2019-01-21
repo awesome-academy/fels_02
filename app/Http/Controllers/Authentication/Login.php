@@ -34,6 +34,11 @@ class Login extends Controller
 
                 return redirect()->route('home.index');
             }
+            else 
+            {
+
+                return redirect()->route('admin.index');
+            }
         }
         else
         {

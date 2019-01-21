@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('title')
-    Trang quản trị
+   @lang('adminMess.title_admin_index')
 @endsection
 @section('content')
 <div class="main-content">
@@ -8,6 +8,7 @@
         <div class="container-fluid">
             <div class="row m-t-25">
                 <div class="col-sm-6 col-lg-3">
+                    <a href="{{ Route('user.index') }}">
                     <div class="overview-item overview-item--c1">
                         <div class="overview__inner">
                             <div class="overview-box clearfix">
@@ -15,7 +16,7 @@
                                     <i class="fas fa-users"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>123</h2>
+                                    <h2>{{ $sumuser }}</h2>
                                     <span>@lang('adminMess.lb_user')</span>
                                 </div>
                             </div>
@@ -24,8 +25,10 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
+                    <a href="{{ Route('topic-admin.index') }}">
                     <div class="overview-item overview-item--c2">
                         <div class="overview__inner">
                             <div class="overview-box clearfix">
@@ -33,7 +36,7 @@
                                     <i class="fas fa-book"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>123</h2>
+                                    <h2>{{ $sumTopic }}</h2>
                                     <span>@lang('adminMess.lb_topic')</span>
                                 </div>
                             </div>
@@ -42,8 +45,10 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
+                    <a href="{{ route('adminlesson.index') }}">
                     <div class="overview-item overview-item--c3">
                         <div class="overview__inner">
                             <div class="overview-box clearfix">
@@ -51,7 +56,7 @@
                                     <i class="fas fa-book"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>123</h2>
+                                    <h2>{{ $sumLesson }}</h2>
                                     <span>@lang('adminMess.lb_lesson')</span>
                                 </div>
                             </div>
@@ -60,8 +65,10 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
+                    <a href="{{ route('adminword.index') }}">
                     <div class="overview-item overview-item--c4">
                         <div class="overview__inner">
                             <div class="overview-box clearfix">
@@ -69,7 +76,7 @@
                                     <i class="fab fa-amilia"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>123</h2>
+                                    <h2>{{ $sumWord }}</h2>
                                     <span>@lang('adminMess.lb_word')</span>
                                 </div>
                             </div>
@@ -78,6 +85,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div>
 @endsection
