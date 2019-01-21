@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('adminword.index') }}">
+                            <a href="#">
                                 <i class="fab fa-amilia"></i>@lang('adminMess.lb_word')
                             </a>
                         </li>

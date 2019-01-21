@@ -58,4 +58,6 @@ return [
     'btn_allWord' => 'Tất cả từ vựng',
     'word_saved' => 'Từ Vựng Đã Nhớ',
     'history' => 'Lịch Sử Hoạt Động',
+    'lb_progress' => 'Tiến độ của bạn',
+    'btn_progress' => 'Tiến độ',
 ];

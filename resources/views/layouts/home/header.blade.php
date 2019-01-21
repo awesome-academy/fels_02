@@ -52,6 +52,9 @@
                                     <a class="dropdown-item" href="{{Route('wordfollow.show', Auth::user()->user_id)}}" id="remember">@lang('messages.word_saved')</a>
                                 </li>
                                 <li>
+                                    <a class="dropdown-item" href="{{Route('user-progress.index')}}" id="remember">@lang('messages.btn_progress')</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="{{Route('history.index')}}" id="history">@lang('messages.history')</a>
                                 </li>
                             </ul>
