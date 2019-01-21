@@ -6,30 +6,26 @@
 <div class="banner">
    {{ Html::script(asset('layouts/home/js/responsiveslides.min.js')) }}
    {{ Html::script(asset('layouts/home/js/slideBar.js')) }}
-
    <div  id="top" class="callbacks_container">
       <ul class="rslides" id="slider3">
          <li>
             <div class="banner-bg">
                <div class="container">
-                  <div class="banner-info">
-                     <h3>Take the first step<span>to knowledge friends</span></h3>
-                     <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
-                        playmakers, these kicks are ready to stand out.
-                     </p>
-                  </div>
+                  <div class="banner-info"><h3 id="quote1"></h3><p id="author1"></p></div>
+               </div>
+            </div>
+         </li>
+         <li>
+            <div class="banner-bg banner-img">
+               <div class="container">
+                  <div class="banner-info"><h3 id="quote2"></h3><p id="author2"></p></div>
                </div>
             </div>
          </li>
          <li>
             <div class="banner-bg banner-img2">
                <div class="container">
-                  <div class="banner-info">
-                     <h3>Stay in touch<span>Lorem Ipsum</span></h3>
-                     <p>Inspired by bold colors and matching up to football’s on-pitch
-                        playmakers, these kicks are ready to stand out.
-                     </p>
-                  </div>
+                  <div class="banner-info"><h3 id="quote3"></h3><p id="author3"></p></div>
                </div>
             </div>
          </li>
