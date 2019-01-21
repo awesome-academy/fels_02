@@ -32,6 +32,11 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
+    Route::resource('test-lesson','TestLessons');
+    Route::post('/test/{id}', [
+        'uses' => 'TestLessons@testLesson',
+        'as' => 'test',
+    ]);
 });
 
 Route::namespace('Admin')->group(function(){
@@ -42,4 +47,8 @@ Route::namespace('Admin')->group(function(){
         'uses' => 'Users@updateStatus',
     ]);
 
+});
+
+Route::get('/markAsRead', function (){
+   Auth()->user()->unreadNotifications->markAsRead();
 });

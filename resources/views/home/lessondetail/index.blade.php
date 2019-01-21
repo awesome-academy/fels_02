@@ -45,7 +45,7 @@
                         </li>
                     </div>
                     @endforeach
-                    <a href="" class="btn btn-success testbtn" >@lang('messages.btn_test')</a>
+                    <a href="{{ route('test-lesson.show', $namelesson->lesson_id) }}" class="btn btn-success testbtn" >@lang('messages.btn_test')</a>
                 </div>
             </div>
         </div>

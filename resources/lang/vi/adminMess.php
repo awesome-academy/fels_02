@@ -1,5 +1,4 @@
 <?php
-
 return [
     'lb_search...' => 'Tìm kiếm...',
     'lb_youHave' => 'Bạn có',
@@ -79,4 +78,16 @@ return [
     'lb_noChoosePicture' => 'Không đổi',
     'lb_choosePicture' => 'Đổi hình ảnh',
     'messFindFail' => 'Không tìm thấy id',
+    'modal_lesson_test' => 'Kết Quả Bài Kiểm Tra',
+    'modal_content1' => 'Đã Hoàn Thành Bài Kiểm Tra:',
+    'modal_content2' => 'Số Câu Trả Lời Đúng:',
+    'modal_content3' => 'Tình Trạng:',
+    'modal_day' => 'Ngày kết thúc:',
+    'finish_test_message' => 'Đã Hoàn Thành Một Bài Kiểm Tra',
+    'mail_greeting' => 'xin chào, Admin',
+    'mail_line' => 'đã hoàn thành một bài kiểm tra',
+    'mail_action' => 'xem chi tiết ở đây',
+    'mail_line2' => 'Cảm ơn bạn đã sử dụng ứng dụng của chúng tôi!',
+    'mail_subject' => 'HỆ THỐNG HỌC TẬP FRAMGIA',
+    'title_admin_index' => ' Trang quản trị',
 ];

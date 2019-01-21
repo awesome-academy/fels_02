@@ -7,6 +7,24 @@ $(document).ready(function(){
         todayHighlight: true,
         autoclose: true,
     })
+    $('#showmodal').click(function () {
+        $('#myModal').modal();
+    })
+
+    $('#myModal').on('show.bs.modal', function (event) {
+        var username = $('#showmodal').attr('data-username');
+        var fullname = $('#showmodal').attr('data-fullname');
+        var examname = $('#showmodal').attr('data-examname');
+        var dayend = $('#showmodal').attr('data-dayend');
+        var sumanswer = $('#showmodal').attr('data-sumanswer');
+        var status = ($('#showmodal').attr('data-status') == 1) ? "PASS":"FAIL";
+        var modal = $(this);
+        modal.find('.modal-body #fullname').text(username+' ( '+fullname+' )');
+        modal.find('.modal-body #examname').text(examname);
+        modal.find('.modal-body #day').text(dayend);
+        modal.find('.modal-body #sumanswer').text(sumanswer);
+        modal.find('.modal-body #status').text(status);
+    });
 });
 
 $('#btn_del').on('click', function (e) {

@@ -98,7 +98,7 @@
                                             <ul class="nav-list list-inline">
                                                 @foreach($displayLessons as $key => $lesson)
                                                 @if($lesson->topic_id == $topic->topic_id)
-                                                <li><a href="#"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
+                                                <li><a href="{{ route('lessondetail.show', $lesson->lesson_id) }}"><img src="/images/lessons/{{ $lesson->picture }}" class="img-responsive in-header" alt=""/></a></li>
                                                 @endif
                                                 @endforeach
                                             </ul>
