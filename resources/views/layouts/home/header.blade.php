@@ -19,6 +19,7 @@
         {{ Html::script(asset('layouts/home/js/bootstrap.min.js')) }}
         {{ Html::script(asset('layouts/home/js/dropdownHead.js')) }}
         {{ Html::script(asset('layouts/home/js/handlejs.js')) }}
+        {{ Html::script('messages.js') }}
         {{ Html::style(asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')) }}
     </head>
     <body>
@@ -121,8 +122,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="navbar-nav"><a href="#">@lang('messages.btn_contact')</a></li>
-                        <li class="navbar-nav"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
+                        <li class="nav navbar-nav nav_1"><a href="#">@lang('messages.btn_contact')</a></li>
+                        <li class="nav navbar-nav nav_1"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
                     </ul>
                 </div>
             </div>

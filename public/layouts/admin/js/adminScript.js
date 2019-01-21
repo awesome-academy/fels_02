@@ -8,10 +8,12 @@ $(document).ready(function(){
         autoclose: true,
         endDate: '+0d'
     })
+
 });
 
-$('#btn_del').on('click', function (e) {
+$('.btn_del').on('click', function (e) {
     if (confirm($(this).data('confirm'))) {
+        $('#delete-form').submit();
         return true;
     }
     else {
@@ -33,10 +35,29 @@ function ajaxToggleActiveStatus(id, presentStatus){
         success: function(data){
         },
         error: function (){
-            alert('có lỗi xảy ra');
+            alert(Lang.get('auth.errors'));
         }
     });
 }
+$(document).ready(function () {
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var lessonid = button.data('lessonid');
+        var lessonname = button.data('lessonname');
+        var preview = button.data('preview');
+        var picture = button.data('picture');
+        var topicid = button.data('topicid');
+        var modal = $(this);
+        modal.find('.modal-body #lesson_id').val(lessonid);
+        modal.find('.modal-body #lesson_name').val(lessonname);
+        modal.find('.modal-body #preview').val(preview);
+        var stringPicture="images/lessons/" + picture;
+        modal.find('.modal-body #xemtruoc').attr("src", stringPicture);
+        modal.find('#form-edit-lesson').attr("action", ['adminlesson/'+lessonid]);
+        modal.find('.modal-body #xemtruoc').attr("src", stringPicture);
+        $("#topic_id option[value='" + topicid + "']").attr("selected", "selected");
+    });
+});
 
 jQuery(function(){
     jQuery('#btnDisplayNone').click();

@@ -28,6 +28,7 @@ return [
     'createsuccessfull' => 'Welcome! Your account has been successfully created!',
     'loginfail' => 'Login Failure',
     'createfail' => 'Create Account Failure',
+    'errors' => 'Errors',
     'forgot' => 'Forgot Password ?',
     'get_password' => 'Click Here',
     'send' => 'Send',

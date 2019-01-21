@@ -21,6 +21,8 @@ return [
     'folder_user_img' => 'images/users',
     'status_userActive1' => 1,
     'status_userActive0' => 0,
+    'file_save_lesson' => 'images/lessons/',
+    'number_lessonmanagerpaginater' => 10,
     'folder_topic_img' => 'images/topics',
     'passPercent' => 70,
     'numberDefault0' => 0,

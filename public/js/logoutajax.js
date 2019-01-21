@@ -10,7 +10,7 @@ $(document).on('click', '#logout', function () {
             window.location.href = '/logout';
         },
         error: function (){
-            alert('Lỗi đã xảy ra');
+            alert(Lang.get('auth.errors'));
         }
     });
     return false;
