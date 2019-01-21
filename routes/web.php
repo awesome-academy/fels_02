@@ -41,7 +41,10 @@ Route::namespace('Admin')->middleware('checkadmin')->group(function(){
     Route::post('/user/update-status', [
         'uses' => 'Users@updateStatus',
     ]);
-
+    Route::get('/chart', [
+        'uses' => 'Charts@index',
+        'as' => 'admin.chart',
+    ]);
 });
 
 Route::get('/markAsRead', function(){

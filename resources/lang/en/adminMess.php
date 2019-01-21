@@ -85,6 +85,7 @@ return [
     'mail_line3' => 'Thank you for using our website!',
     'mail_action' => 'View new topic',
     'mail_subject' => 'New Topic',
+    'titleChart' => 'Statistical Charts',
     'mailTestLesson_subject' => 'Unfinish Test Lessons',
     'mailTestLesson_line1.1' => 'The test ',
     'mailTestLesson_line1.2' => ' of you unfinish',
