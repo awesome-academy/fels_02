@@ -17,7 +17,7 @@ function hideURLbar() {
 $(document).ready(function () {
   $.ajax({
     type: 'GET',
-    url: 'http://quotes.rest/qod.json?category=inspire',
+    url: 'http://quotes.rest/qod.json?category=management',
     data: {
       get_param: 'value'
     },

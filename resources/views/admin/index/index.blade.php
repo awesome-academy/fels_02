@@ -68,7 +68,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="{{-- route('adminword.index') --}}">
+                    <a href="#">
                     <div class="overview-item overview-item--c4">
                         <div class="overview__inner">
                             <div class="overview-box clearfix">
