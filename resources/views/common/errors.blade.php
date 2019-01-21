@@ -13,3 +13,6 @@
 @if (Session::has('messagecreate'))
     <script> alert('{{ Session::get('messagecreate')}}')</script>
 @endif
+@if (Session::has('msg'))
+    <script> alert('{{ Session::get('msg')}}')</script>
+@endif

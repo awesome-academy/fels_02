@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\History;
 use App\Models\Lesson;
 use App\Models\TestLesson;
+use Illuminate\Support\Facades\Auth;
 use App\Models\WordRemember;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -52,5 +53,20 @@ class User extends Authenticatable
     public function historys()
     {
         return $this->hasMany(History::class);
+    }
+
+    public function checkAdmin()
+    {
+        if ( Auth()->check() ) {
+
+            $role_id = Auth::user()->role_id;
+            if ( $role_id !== config('setting.numberDefault3') ) {
+
+                return true;
+            } else {
+                
+                return false;
+            }
+        } 
     }
 }

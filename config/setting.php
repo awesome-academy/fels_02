@@ -8,6 +8,7 @@ return [
     'number_paginate' => 1,
     'number_lessonPaginate' => 1,
     'number_topicPaginate' => 1,
+    'number_topicAdminPaginate' => 5,
     'number_userPaginate' => 2,
     'number_whereRoleID' => 1,
     'statusUser' => 1,
@@ -20,4 +21,7 @@ return [
     'status_userActive1' => 1,
     'status_userActive0' => 0,
     'folder_topic_img' => 'images/topics',
+    'numberDefault1' => 1,
+    'numberDefault3' => 3,
+    'link_topic_default' => 'http://127.0.0.1:8000/topic',
 ];

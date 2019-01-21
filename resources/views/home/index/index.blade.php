@@ -3,10 +3,10 @@
     @lang('messages.index_title')
 @endsection
 @section('content')
+@include('common.errors')
 <div class="banner">
    {{ Html::script(asset('layouts/home/js/responsiveslides.min.js')) }}
    {{ Html::script(asset('layouts/home/js/slideBar.js')) }}
-
    <div  id="top" class="callbacks_container">
       <ul class="rslides" id="slider3">
          <li>

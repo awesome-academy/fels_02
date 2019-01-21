@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddTopicRequest;
 use App\Http\Requests\EditTopicRequest;
+use App\Notifications\CreateTopic;
+use App\Mail\AdminMailer;
 use App\Models\Topic;
+use App\Models\User;
+use Mail;
 use File;
 
 class TopicsAdmin extends Controller
@@ -18,7 +22,7 @@ class TopicsAdmin extends Controller
      */
     public function index()
     {
-        $topics = Topic::paginate(config('setting.number_topicPaginate'));
+        $topics = Topic::paginate(config('setting.number_topicAdminPaginate'));
 
         return view('admin.topic.index', compact('topics'));
     }
@@ -39,20 +43,24 @@ class TopicsAdmin extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(AddTopicRequest $request)
+    public function store(AddTopicRequest $request, Topic $topic)
     {
-        $topic = new Topic;
+        $users = User::select('email')->where('role_id', '!=', config('setting.numberDefault1'))->get();
+        $userByRole = User::where('role_id', '!=', config('setting.numberDefault1'))->get();
         $topic->topic_name = $request->name;
         $topic->preview = $request->preview;
-
         $picture = $request->file('picture');
         $time = time();
         $end_file = $picture->getClientOriginalExtension();
         $file_name = 'Topic-'.$time.'.'.$end_file;
         $topic->picture = $file_name;
         $picture->move(config('setting.folder_topic_img'), $file_name);
-
         $resultAdd = $topic->save();
+
+        foreach ($userByRole as $key) {
+            $key->notify(new CreateTopic($topic));
+        }
+        
         if($resultAdd) {
 
             return redirect()->route('topic-admin.index')->with('msg', trans('adminMess.msg_addSuccess'));

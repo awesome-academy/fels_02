@@ -33,4 +33,7 @@ return [
     'lesson_decription' => 'Tất cả các chủ đề',
     'lang.en' => 'Tiếng Anh',
     'lang.vi' => 'Tiếng Việt',
+    'check_admin' => 'Bạn phải là admin để truy cập trang quản trị',
+    'check_login' => 'Vui lòng để truy cập trang quản trị',
+    'lb_notification' => 'Thông báo',
 ];

@@ -33,4 +33,7 @@ return [
     'lesson_decription' => 'All Topic',
     'lang.en' => 'English',
     'lang.vi' => 'Vietnamese',
+    'check_admin' => 'You must be an admin to access the admin page',
+    'check_login' => 'Please login to access the admin page',
+    'lb_notification' => 'Notification',
 ];
