@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\History;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Topic;
@@ -10,6 +11,7 @@ use App\Models\LessonDetail;
 use App\Models\TestLesson;
 use App\Models\UserTopic;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TestLessons extends Controller
 {
@@ -22,6 +24,21 @@ class TestLessons extends Controller
         $topic = Topic::where('topic_id', $lesson->topic_id)->first();
         $lessons = Lesson::where('topic_id', $topic->topic_id)->get();
         $words = LessonDetail::where('lesson_id', $lesson->lesson_id)->get();
+        $newexam = [
+            'exam_name' => $lesson->lesson_name,
+            'user_id' => Auth::user()->user_id,
+            'lesson_id' => $id,
+        ];
+        $newhistory = [
+            'user_id' => Auth::user()->user_id,
+            'lesson_id' => $id,
+            'content' => trans('adminMess.content_history')." ( ".$lesson->lesson_name." )",
+        ];
+        $check = TestLesson::where('user_id', Auth::user()->user_id)->where('lesson_id', $id)->count();
+        if($check == config('setting.check_exist_test')){
+            TestLesson::create($newexam);
+            History::create($newhistory);
+        }
 
         return view('home.lesson.testLesson', compact('displayTopics', 'displayLessons', 'lesson', 'lessons', 'topic', 'words'));
     }
@@ -49,7 +66,7 @@ class TestLessons extends Controller
             }
             TestLesson::where('lesson_id', $lesson->lesson_id)->update([
                 'sum_correct_answer' => $count,
-                'status'=>$test_lesson->status,
+                'status'=> $test_lesson->status,
             ]);
         }
     }
@@ -120,6 +137,13 @@ class TestLessons extends Controller
         $this->insertProgress($user_id, $topic_id, $percent);
 
         if ($percent >= config('setting.passPercent') ) {
+            $name_exam = DB::table("test_lesson as tl")->join("lesson as ls", "tl.lesson_id", "=", "ls.lesson_id")->where('tl.lesson_id', $id)->first();
+            $newhistory = [
+                'user_id' => Auth::user()->user_id,
+                'lesson_id' => $id,
+                'content' => trans('adminMess.content_history2')." ( ".$name_exam->lesson_name." ) , ".trans('adminMess.point_history').$count." / ".$countWord,
+            ];
+            History::create($newhistory);
             $msg = trans('messages.testSuccess');
 
             return view('home.lesson.testLesson', compact('displayTopics', 'displayLessons', 'topic', 'lesson', 'words', 'lessons', 'count', 'username', 'msg', 'percent', 'countWord', 'oldWords'));

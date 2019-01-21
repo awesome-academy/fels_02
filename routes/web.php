@@ -33,6 +33,7 @@ Route::namespace('Authentication')->middleware('localization')->group(function()
 Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('test-lesson','TestLessons')->middleware('testlesson');
     Route::resource('home', 'Home');
+    Route::resource('history', 'MyHistory');
     Route::resource('wordfollow', 'MyWordRemember');
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');

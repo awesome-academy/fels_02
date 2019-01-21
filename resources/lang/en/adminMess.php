@@ -127,5 +127,11 @@ return [
     'lb_noChoosePicture' => 'Not Change',
     'lb_choosePicture' => 'Change Picture',
     'messFindFail' => 'No id found',
+    'content_history' => 'You have created a test',
+    'content_history2' => 'You have completed a test',
+    'history_title' => 'HISTORY ACTIVITIES',
+    'point_history' => 'Point:',
     'title_admin_index' => 'Admin Dashboard',
+    'follow_word_history' => 'You have followed a vocabulary word',
+    'unfollow_word_history' => 'You have unfollow a vocabulary word',
 ];
