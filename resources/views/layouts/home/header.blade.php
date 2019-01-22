@@ -63,7 +63,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i><span>@lang('messages.btn_search')</span></a>
                             <ul class="dropdown-menu search-form">
-                                {!! Form::open(['method'=>'POST']) !!}
+                                {!! Form::open(['method'=>'POST', 'route'=>'search']) !!}
                                 {!! Form::text('search', '', ['class'=>'search-text', 'placeholder'=>trans('messages.lb_search')]) !!}
                                 {!! Form::submit('Search', ['class'=>'search-submit']) !!}
                                 {!! Form::close() !!}
