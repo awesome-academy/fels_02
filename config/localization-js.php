@@ -15,9 +15,6 @@ return [
         'adminMess',
         'auth',
         'messages',
-        'pagination',
-        'passwords',
-        'validation',
     ],
 
     /*

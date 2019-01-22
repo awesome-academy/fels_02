@@ -58,4 +58,12 @@ return [
     'history' => 'Lịch Sử Hoạt Động',
     'lb_progress' => 'Tiến độ của bạn',
     'btn_progress' => 'Tiến độ',
+    'validation_js_username' => 'Tên tài khoản phải có ít nhất 4 kí tự và phải bắt đầu bằng một chữ cái',
+    'validation_js_password' => 'Mật khẩu ít nhất có 6 kí tự bao gồm chữ và số',
+    'validation_js_fullname' => 'Họ tên chỉ bao gồm chữ cái và phải tối thiểu 6 kí tự',
+    'validation_js_email' => 'Phía trước dấu @ phải có ít nhất một kí tự và phía sau dấu @ là tối đa 2 đuôi tên miền.',
+    'validate_username' => 'tên tài khoản:',
+    'validate_email' => 'Email:',
+    'validate_exist' => 'đã tồn tại',
+    'validate_re_password' => 'vui lòng nhập mật khẩu trùng khớp',
 ];

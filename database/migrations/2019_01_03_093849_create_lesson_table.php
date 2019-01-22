@@ -16,8 +16,8 @@ class CreateLessonTable extends Migration
         Schema::create('lesson', function (Blueprint $table) {
             $table->increments('lesson_id');
             $table->string('lesson_name');
-            $table->string('preview');
-            $table->string('picture')->default('default.jpeg');;
+            $table->string('preview')->nullable();
+            $table->string('picture')->default('default.png');;
             $table->integer('topic_id');
         });
     }

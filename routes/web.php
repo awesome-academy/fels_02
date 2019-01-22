@@ -62,3 +62,8 @@ Route::namespace('Admin')->middleware('localization')->group(function(){
         'uses' => 'Users@updateStatus',
     ]);
 });
+
+Route::get('/ajax-user', [
+   'uses' => 'Ajax@ajaxUsername',
+   'as' => 'ajax.user',
+]);

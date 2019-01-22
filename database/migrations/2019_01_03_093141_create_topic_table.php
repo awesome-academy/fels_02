@@ -16,8 +16,8 @@ class CreateTopicTable extends Migration
         Schema::create('topic', function (Blueprint $table) {
             $table->increments('topic_id');
             $table->string('topic_name');
-            $table->string('preview');
-            $table->string('picture')->default('default.jpeg');;
+            $table->string('preview')->nullable();
+            $table->string('picture')->default('default.png');;
             $table->integer('parent_id')->default(0);
         });
     }
