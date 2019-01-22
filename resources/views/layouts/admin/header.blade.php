@@ -8,9 +8,7 @@
     <meta name="author" content="Framgia E-Learning">
     <meta name="keywords" content="Framgia E-Learning">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>@yield('title')</title>
-
     {{ Html::style(asset('layouts/admin/css/font-face.css')) }}
     {{ Html::style(asset('layouts/admin/vendor/font-awesome-4.7/css/font-awesome.min.css')) }}
     {{ Html::style(asset('layouts/admin/vendor/font-awesome-5/css/fontawesome-all.min.css')) }}
@@ -25,6 +23,7 @@
     {{ Html::style(asset('layouts/admin/vendor/perfect-scrollbar/perfect-scrollbar.css')) }}
     {{ Html::style(asset('layouts/admin/css/theme.css')) }}
     {{ Html::style(asset('layouts/admin/css/adminStyle.css')) }}
+    {{ Html::style(asset('layouts/admin/css/mystyle.css')) }}
     {{ Html::style(asset('https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css')) }}
     {{ Html::script(asset('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')) }}
     {{ Html::script('messages.js') }}
