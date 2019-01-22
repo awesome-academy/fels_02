@@ -318,9 +318,18 @@
 	margin: 10px;
 }
 .result-img {
-    display: inline-block;
-    border: 2px solid #E5E5E5;
-    margin-left: 5px;
-    border-radius: 5px;
-    width: 76%;
+  display: inline-block;
+  border: 2px solid #E5E5E5;
+  margin-left: 5px;
+  border-radius: 5px;
+  width: 76%;
+}
+.footer {
+  margin-top: 20px;
+}
+.circle-area {
+  padding-top: 2em;
+}
+.container-progress {
+  background-color: white;
 }

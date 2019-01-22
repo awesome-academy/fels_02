@@ -44,7 +44,6 @@ $(document).ready(function () {
       get_param: 'value'
     },
     success: function (data) {
-      console.log(data);
         $('#quote3').replaceWith('<h3 id="quote3">' + data.contents.quotes[0].quote + '</h3>')
         $('#author3').replaceWith('<p id="author3">' + data.contents.quotes[0].author + '</p>')
     }

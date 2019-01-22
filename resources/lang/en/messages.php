@@ -58,4 +58,6 @@ return [
     'btn_allWord' => 'All Words',
     'word_saved' => 'Words saved',
     'history' => 'History Activities',
+    'lb_progress' => 'Your Progress',
+    'btn_progress' => 'Progress',
 ];

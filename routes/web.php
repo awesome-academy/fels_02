@@ -38,7 +38,7 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::resource('lessondetail', 'DetailLesson');
     Route::resource('lesson', 'Lessons');
     Route::resource('topic', 'Topics');
-    Route::resource('progress','UserProgress');
+    Route::resource('user-progress','UserProgress');
     Route::post('/test/{id}',[
         'uses' => 'TestLessons@testLesson',
         'as' => 'test',
@@ -47,6 +47,7 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::post('/wordRemember',[
         'uses' => 'Words@wordRemember',
     ]);
+    
 });
 
 Route::namespace('Admin')->middleware('localization')->group(function(){
