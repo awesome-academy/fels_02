@@ -27,73 +27,70 @@
     {{ Html::style(asset('layouts/admin/css/adminStyle.css')) }}
     {{ Html::style(asset('https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css')) }}
     {{ Html::script(asset('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')) }}
+    {{ Html::script(asset('https://code.jquery.com/jquery-3.3.1.slim.min.js')) }}
+    {{ Html::script(asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')) }}
+    {{ Html::script(asset('https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')) }}
+
 </head>
 <body class="animsition">
-    <div class="page-wrapper">
-        @include('layouts.admin.leftbar')
-        <div class="page-container">
-            <header class="header-desktop">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="header-wrap">
-                            {!! Form::open(['class'=>'form-header', 'method'=>'POST']) !!}
-                                {!! Form::text('search', '', ['class'=>'au-input au-input--xl', 'placeholder'=>trans('adminMess.lb_search...')]) !!}
-                                {!! Form::submit(trans('adminMess.btn_search'), ['class'=>'au-btn--submit search-admin']) !!}
-                            {!! Form::close() !!}
-                            <div class="header-button">
-                                <div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
-                                        <div class="notifi-dropdown js-dropdown">
-                                            <div class="notifi__title">
-                                                <p>
-                                                    @lang('adminMess.lb_youHave')
-                                                        <span>3</span> 
-                                                    @lang('adminMess.lb_newNoti')
-                                                </p>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>@lang('adminMess.lb_haveMess')</p>
-                                                    <span class="date">10/04/2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="">@lang('adminMess.btn_allNoti')</a>
-                                            </div>
+<div class="page-wrapper">
+    @include('layouts.admin.leftbar')
+    <div class="page-container">
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        {!! Form::open(['class'=>'form-header', 'method'=>'POST']) !!}
+                            {!! Form::text('search', '', ['class'=>'au-input au-input--xl', 'placeholder'=>trans('adminMess.lb_search...')]) !!}
+                            {!! Form::submit(trans('adminMess.btn_search'), ['class'=>'au-btn--submit search-admin']) !!}
+                        {!! Form::close() !!}
+                        <div class="header-button">
+                            <div class="noti-wrap">
+                                <div class="noti__item js-item-menu"id="markasread" onclick="return markNotificationAsRead({{count(Auth()->user()->unreadNotifications)}})">
+                                    <i class="zmdi zmdi-notifications"></i>
+                                    <span class="quantity">{{count(Auth()->user()->unreadNotifications)}}</span>
+                                    <div class="notifi-dropdown js-dropdown" >
+                                        <div class="notifi__title">
+                                            <p>
+                                                @lang('adminMess.lb_youHave')
+                                                <span>{{count(Auth()->user()->unreadNotifications)}}</span>
+                                                @lang('adminMess.lb_newNoti')
+                                            </p>
+                                        </div>
+                                        @foreach(Auth()->user()->Notifications as $notification)
+                                            @include('layouts.admin.notifications.test_lesson_notify')
+                                        @endforeach
+                                        <div class="notifi__footer footer-notification">
+                                            <a href="">@lang('adminMess.btn_allNoti')</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="account-wrap">
-                                    <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="/images/users/avatar.jpg" />
-                                        </div>
-                                        <div class="content">
-                                            <a class="js-acc-btn" href="#">Admin</a>
-                                        </div>
-                                        <div class="account-dropdown js-dropdown">
-                                            <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="/images/users/avatar.jpg" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="name">
-                                                        <a href="#"> xuan nam</a>
-                                                    </h5>
-                                                    <span class="email">xnam7799@gmail.com</span>
-                                                </div>
+                            </div>
+                            <div class="account-wrap">
+                                <div class="account-item clearfix js-item-menu">
+                                    <div class="image">
+                                        <img src="/images/users/{{ Auth()->user()->avatar }}" />
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn" href="#">{{ Auth()->user()->username }}</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="/images/users/{{ Auth()->user()->avatar }}" />
+                                                </a>
                                             </div>
-                                            
-                                            <div class="account-dropdown__footer">
-                                                <a href=""><i class="zmdi zmdi-power"></i>@lang('adminMess.btn_logout')</a>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#">{{ Auth::user()->username }}</a>
+                                                </h5>
+                                                <span class="email">{{ Auth::user()->email }}</span>
                                             </div>
+                                        </div>
+
+                                        <div class="account-dropdown__footer ">
+                                            <a href="{{route('logout.index')}}"><i class="zmdi zmdi-power"></i>@lang('adminMess.btn_logout')</a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,4 +98,5 @@
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+        </header>

@@ -29,7 +29,7 @@
                     <div class="portfolio-description">
                         <h4><a href="#">{{ $lesson->lesson_name }}</a></h4>
                         <p>{{ $lesson->preview }}</p>
-                        <a href="events.php">
+                        <a href="{{ route('lessondetail.show', $lesson->lesson_id) }}">
                             <span><i class="fa fa-chain chain_1"></i>@lang('messages.btn_viewLesson')</span>
                         </a>
                     </div>
