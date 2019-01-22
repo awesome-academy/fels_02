@@ -47,7 +47,10 @@ Route::namespace('Home')->middleware('localization')->group(function(){
     Route::post('/wordRemember',[
         'uses' => 'Words@wordRemember',
     ]);
-    
+    Route::post('/search',[
+        'uses' => 'Search@search',
+        'as' => 'search',
+    ]);
 });
 
 Route::namespace('Admin')->middleware('localization')->group(function(){
