@@ -85,6 +85,7 @@ return [
     'mail_line3' => 'Cám ơn vì đã sử dụng trang web của chúng tôi !',
     'mail_action' => 'Xem chủ đề mới',
     'mail_subject' => 'Chủ đề mới',
+    'titleChart' => 'Biểu đồ thông kê',
     'mailTestLesson_subject' => 'Chưa hoàn thành bài kiểm tra',
     'mailTestLesson_line1.1' => 'Bài kiểm tra ',
     'mailTestLesson_line1.2' => ' của bạn chưa hoàn thành',
