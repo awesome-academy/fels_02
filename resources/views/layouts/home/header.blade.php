@@ -101,7 +101,6 @@
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav nav_1">
                         <li><a href="{{ route('home.index') }}">@lang('messages.btn_home')</a></li>
-                        <li><a href="#">@lang('messages.btn_about')</a></li>
                         <li class="dropdown mega-dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('messages.btn_topic')<span class="caret"></span></a>
                             <div class="dropdown-menu mega-dropdown-menu">
@@ -128,7 +127,6 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav navbar-nav nav_1"><a href="#">@lang('messages.btn_contact')</a></li>
                         <li class="nav navbar-nav nav_1"><a href="{{ route('words.index') }}">@lang('messages.btn_allWord')</a></li>
                     </ul>
                 </div>

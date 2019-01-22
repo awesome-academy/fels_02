@@ -15,7 +15,7 @@ class Home extends Controller
 		$displayTopics = Topic::get();
         $displayLessons = Lesson::get();
 
-        $lessonsForToday = Lesson::limit(config('setting.number_limitLessonToday'))->get();
+        $lessonsForToday = Lesson::get();
         $displayWordToday = LessonDetail::inRandomOrder()->limit(config('setting.number_limit'))->get();
 		$displayTopicToday = Topic::inRandomOrder()->limit(config('setting.number_limitTopic'))->get();
 

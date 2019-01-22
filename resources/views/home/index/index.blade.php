@@ -93,7 +93,7 @@
                                     </div>
                                  </div>
                                  <div class="event_right">
-                                    <h3><a href="#">{{ $lesson->lesson_name }}</a></h3>
+                                    <h3><a href="{{ route('lessondetail.show', $lesson->lesson_id) }}">{{ $lesson->lesson_name }}</a></h3>
                                     <p>{{ $lesson->preview }}</p>
                                     <a href="{{ route('lessondetail.show', $lesson->lesson_id) }}">
                                        <div class="btn-readmore">
@@ -107,6 +107,7 @@
                         @endforeach
                      </div>
                   @endforeach
+                  
                </div>
             </div>
          </div>

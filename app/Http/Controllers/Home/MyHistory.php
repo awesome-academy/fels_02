@@ -19,7 +19,6 @@ class MyHistory extends Controller
         $displayLessons = Lesson::get();
         $history = DB::table("history as ht")->select("ht.*", "ls.lesson_name")->join("lesson as ls", "ls.lesson_id", "=", "ht.lesson_id")
             ->where("user_id", Auth::user()->user_id)->orderBy("created_at", "DESC")->get();
-
         return view('home.history.index', compact('displayTopics', 'displayLessons', 'history'));
     }
 }

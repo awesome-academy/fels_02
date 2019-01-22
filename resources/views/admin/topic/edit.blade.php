@@ -33,10 +33,11 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    {!! Form::label('file-input', trans('adminMess.lb_choosePicture'), ['class'=>'form-control-label']) !!}
                                     {!! Form::radio('radio', 'yes', '', ['id'=>'btnDisplayBlock']) !!}
-                                    {!! Form::label('file-input', trans('adminMess.lb_noChoosePicture'), ['class'=>'form-control-label']) !!}
+                                    {!! Form::label('file-input', trans('adminMess.lb_choosePicture'), ['class'=>'form-control-label']) !!}
+                                    <br>
                                     {!! Form::radio('radio', 'no', '', ['id'=>'btnDisplayNone']) !!}
+                                    {!! Form::label('file-input', trans('adminMess.lb_noChoosePicture'), ['class'=>'form-control-label']) !!}
                                 </div>
                                 <div class="col-12 col-md-9" id="chooseFile">
                                     {!! Form::file('picture', ['id'=>'file-input', 'class'=>'form-control-file']) !!}
