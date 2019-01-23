@@ -24,12 +24,6 @@
                         <table class="table table-data2">
                             <thead>
                                 <tr>
-                                    <th>
-                                        <label class="au-checkbox">
-                                            <input type="checkbox">
-                                            <span class="au-checkmark"></span>
-                                        </label>
-                                    </th>
                                     <td>@lang('adminMess.lb_topicName')</td>
                                     <td>@lang('adminMess.lb_preview')</td>
                                     <td>@lang('adminMess.lb_picture')</td>
@@ -39,12 +33,6 @@
                             <tbody>
                                 @foreach($topics as $key => $topic)
                                 <tr class="tr-shadow">
-                                    <td>
-                                        <label class="au-checkbox">
-                                            <input type="checkbox">
-                                            <span class="au-checkmark"></span>
-                                        </label>
-                                    </td>
                                     <td class="desc">{{ $topic->topic_name }}</td>
                                     <td class="long">{{ $topic->preview }}</td>
                                     <td>
@@ -57,7 +45,6 @@
                                     <td>
                                         <a href="{{ route('topic-admin.edit', $topic->topic_id) }}" class="btn btn-primary" role="button">@lang('adminMess.btn_edit')</a>
                                         {!! Form::open(['route'=>['topic-admin.destroy', $topic->topic_id], 'method'=>'DELETE']) !!}
-                                            {!! Form::submit(trans('adminMess.btn_del'), ['id'=>'btn_del', 'class'=>'btn btn-danger', 'data-confirm' => trans('adminMess.confirmDelete')]) !!}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>

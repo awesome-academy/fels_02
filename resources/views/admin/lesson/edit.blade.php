@@ -44,7 +44,7 @@
                             {!! Form::label('picture', trans('adminMess.lb_lesson_picture'), ['class' => 'form-control-label']) !!}
                         </div>
                         <div class="col-12 col-md-9 ">
-                            <img src="" id="xemtruoc" class="img-preview"/>
+                            <img class="img-preview" id="img-preview"/>
                             {!! Form::file('picture',['class' => 'form-control-file', 'id' => 'picture'])  !!}
                         </div>
                     </div>

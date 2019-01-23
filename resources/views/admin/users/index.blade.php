@@ -29,12 +29,6 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
                                         <td>@lang('adminMess.lb_username')</td>
                                         <td>@lang('adminMess.lb_role')</td>
                                         <td>@lang('adminMess.lb_avatar')</td>
@@ -45,12 +39,6 @@
                                 <tbody>
                                     @foreach($Users as $key => $user)
                                     <tr>
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
                                         <td>
                                             <div class="table-data__info">
                                                 <h6>{{ $user->username }}</h6>

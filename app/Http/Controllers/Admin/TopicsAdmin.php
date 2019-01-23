@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\LessonDetail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddTopicRequest;
 use App\Http\Requests\EditTopicRequest;
 use App\Models\Topic;
+use App\Models\Lesson;
 use File;
 
 class TopicsAdmin extends Controller
@@ -141,6 +143,7 @@ class TopicsAdmin extends Controller
     public function destroy($id)
     {
         $topic = Topic::find($id);
+        Lesson::where('topic_id',$topic->topic_id)->delete();
         $resultDel = $topic->delete($id);
         File::delete(config('setting.folder_topic_img').'/'.$topic->picture);
 

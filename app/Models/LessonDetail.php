@@ -14,6 +14,7 @@ class LessonDetail extends Model
         'word_name',
         'picture',
         'sound',
+        'spelling',
         'translate',
         'lesson_id',
     ];
