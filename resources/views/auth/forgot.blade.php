@@ -21,13 +21,13 @@
             {!! Form::open(array('route' => 'forgot.store', 'class' => '')) !!}
             @include('common.errors')
             <div class="form-group">
-                {!! Form::email('email', old('email'), ['class' =>'required form-control', 'placeholder' => trans('auth.email')]) !!}
+                {!! Form::email('email', old('email'), ['class' =>'form-control', 'id' => 'email', 'placeholder' => trans('auth.email'), 'required' => 'required', 'pattern' => config('setting.patter_email'),  'title' => trans('messages.validation_js_email')]) !!}
             </div>
             <div class="form-group">
-                {!! Form::text('username', old('username'), ['class' =>'required form-control', 'placeholder' => trans('auth.username')]) !!}
+                {!! Form::text('username', old('username'), ['class' =>'required form-control', 'id' => 'username', 'placeholder' => trans('auth.username'), 'required' => 'required', 'pattern' => '^[a-z\d\.]{4,}$', 'title' => trans('messages.validation_js_username')]) !!}
             </div>
             <div class="send">
-                {!! Form::submit(trans('auth.send'), ['class' => 'button']) !!}
+                {!! Form::submit(trans('auth.send'), ['class' => 'btn btn-success']) !!}
             </div>
             {!! Form::close() !!}
         </div>
