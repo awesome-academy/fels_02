@@ -45,6 +45,10 @@ Route::namespace('Admin')->middleware('checkadmin')->group(function(){
         'uses' => 'Charts@index',
         'as' => 'admin.chart',
     ]);
+    Route::get('/pieChart', [
+        'uses' => 'Charts@pieChart',
+        'as' => 'admin.pieChart',
+    ]);
 });
 
 Route::get('/markAsRead', function(){

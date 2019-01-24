@@ -55,3 +55,14 @@
 #container {
   height: 30em;
 }
+
+.piechart {
+  min-width: 310px;
+  max-width: 600px; 
+  height: 400px; 
+  margin: 0 auto;
+}
+
+#piechart {
+  display: none;
+}
