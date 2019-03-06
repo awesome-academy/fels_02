@@ -4,18 +4,31 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
-use App\Models\Topic;
-use App\Models\Lesson;
+use App\Repositories\Lesson\LessonRepository;
+use App\Repositories\Topic\TopicRepository;
 
 class Lessons extends Controller
 {
+    protected $lessonRepository;
+    protected $topicRepository;
+
+    public function __construct(
+        LessonRepository $lessonRepository,
+        TopicRepository $topicRepository
+    )
+    {
+        $this->lessonRepository = $lessonRepository;
+        $this->topicRepository = $topicRepository;
+    }
+
     public function show($topic_id)
     {
-        $displayLessons = Lesson::get();
-        $displayTopics = Topic::get();
-        $topic = Topic::find($topic_id);
-        $resultLesson = Lesson::where('topic_id', $topic_id)->paginate(config('setting.number_lessonPaginate'));
+        $displayLessons = $this->lessonRepository->getAll();
+        $displayTopics = $this->topicRepository->getAll();
+        
+        $topic = $this->topicRepository->find($topic_id);
+
+        $resultLesson = $this->lessonRepository->paginate($topic_id);
 
         return view('home.lesson.index', compact('displayTopics', 'displayLessons', 'resultLesson', 'topic'));
     }
